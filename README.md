@@ -1,2 +1,2 @@
-# webdesign
-Repository del corso “Web design”, Ca’ Foscari, 2017/2018
+# Web design
+Repository del corso “Web design” - Ca’ Foscari, 2017/2018
