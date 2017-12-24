@@ -6,6 +6,12 @@
 .container.main{
     height: 100%;
 }
+@media (max-width: 768px) {
+    /* When mobile 100% - header height - footer height */
+    .container.main{
+        height: calc(100% - 50px - 22px) !important; 
+    }
+}
 
 footer.footer{
     position: absolute;
