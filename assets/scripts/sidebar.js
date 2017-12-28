@@ -22,4 +22,10 @@ $(document).ready(function () {
         height2 = $('.main').height()
           htmlbodyHeightUpdate()
     });
+
+    // perfect scrollbar
+    var navbar = new PerfectScrollbar('nav.navbar');
+    var articlesContainer = new PerfectScrollbar('#articles-container');
+    var rightArticlesContainer = new PerfectScrollbar('#right-articles-container');
 });
+

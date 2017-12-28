@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/styles/perfect-scrollbar.css">
     <link rel="stylesheet" href="./assets/styles/sidebar.css">
     <link rel="stylesheet" href="./assets/styles/searchbar.css">
     <link rel="stylesheet" href="./assets/styles/main.css">
@@ -21,6 +22,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="./assets/scripts/sidebar.js"></script>
+    <script src="./assets/scripts/perfect-scrollbar.min.js"></script>
 
     <title>Web design</title>
 </head>
@@ -205,23 +207,23 @@
                 <div class="row">
                     <div class="col-md-9 text-right debug-layout">
                         <!-- Search box -->
-                            <form action="" class="search-form" style="max-width: 300px">
-                                    <div class="form-group has-feedback">
-                                        <label for="search" class="sr-only">Search</label>
-                                        <input type="text" class="form-control" name="search" id="search" placeholder="search">
-                                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                    </div>
-                                </form>
+                        <form action="" class="search-form" style="max-width: 300px">
+                            <div class="form-group has-feedback">
+                                <label for="search" class="sr-only">Search</label>
+                                <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                        </form>
                     </div>
                     <div class="col-md-3 text-right debug-layout" id="userbox">
-                            <!-- User box -->
+                        <!-- User box -->
                         <span class="glyphicon glyphicon-user"></span>
                     </div>
                 </div>
                 <!-- Content here -->
                 <div class="row">
                     <!-- Main articles -->
-                    <div class="col-sm-12 col-md-9 col-no-padding" id="article-container">
+                    <div class="col-sm-12 col-md-9 col-no-padding" id="articles-container">
                         <div class="row article debug-layout">
                             <div class="col-xs-12">
                                 <article>
@@ -362,117 +364,338 @@
                                 </article>
                             </div>
                         </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- Footer -->
+                        <footer class="footer mt-15 debug-layout">
+                            <div class="row">
+                                <div class="col-md-4 hidden-xs hidden-sm">
+                                    Indice sito
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="row">
+                                        <a href="#" class="fa fa-facebook"></a>
+                                        <a href="#" class="fa fa-youtube"></a>
+                                        <a href="#" class="fa fa-instagram"></a>
+                                        <a href="#" class="fa fa-rss"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    Copyright
+                                </div>
+                            </div>
+                        </footer>
                     </div>
                     <!-- Right articles -->
-                    <div class="col-md-3 hidden-sm hidden-xs col-no-dx-padding">
-                        <div class="row article debug-layout">
-                            <div class="col-xs-12">
-                                <article>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <a href="#">
+                    <div class="col-md-3 hidden-sm hidden-xs col-no-dx-padding" id="right-content">
+                        <div id="right-articles-container">
+                            <div class="row article debug-layout">
+                                <div class="col-xs-12">
+                                    <article>
+                                        <div class="row">
+                                            <div class="col-xs-12">
                                                 <a href="#">
-                                                    <h4>Raymond Dragon</h4>
+                                                    <a href="#">
+                                                        <h4>Raymond Dragon</h4>
+                                                    </a>
                                                 </a>
-                                            </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <img src="http://via.placeholder.com/50x50" width="100%">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="http://via.placeholder.com/50x50" width="100%">
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="row article debug-layout">
+                                <div class="col-xs-12">
+                                    <article>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <a href="#">
+                                                    <a href="#">
+                                                        <h4>Raymond Dragon</h4>
+                                                    </a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="http://via.placeholder.com/50x50" width="100%">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="row article debug-layout">
+                                <div class="col-xs-12">
+                                    <article>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <a href="#">
+                                                    <a href="#">
+                                                        <h4>Raymond Dragon</h4>
+                                                    </a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="http://via.placeholder.com/50x50" width="100%">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="row article debug-layout">
+                                <div class="col-xs-12">
+                                    <article>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <a href="#">
+                                                    <a href="#">
+                                                        <h4>Raymond Dragon</h4>
+                                                    </a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="http://via.placeholder.com/50x50" width="100%">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="row article debug-layout">
+                                <div class="col-xs-12">
+                                    <article>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <a href="#">
+                                                    <a href="#">
+                                                        <h4>Raymond Dragon</h4>
+                                                    </a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="http://via.placeholder.com/50x50" width="100%">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="row article debug-layout">
+                                <div class="col-xs-12">
+                                    <article>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <a href="#">
+                                                    <a href="#">
+                                                        <h4>Raymond Dragon</h4>
+                                                    </a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="http://via.placeholder.com/50x50" width="100%">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="row article debug-layout">
+                                <div class="col-xs-12">
+                                    <article>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <a href="#">
+                                                    <a href="#">
+                                                        <h4>Raymond Dragon</h4>
+                                                    </a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="http://via.placeholder.com/50x50" width="100%">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="row article debug-layout">
+                                <div class="col-xs-12">
+                                    <article>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <a href="#">
+                                                    <a href="#">
+                                                        <h4>Raymond Dragon</h4>
+                                                    </a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="http://via.placeholder.com/50x50" width="100%">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="row article debug-layout">
+                                <div class="col-xs-12">
+                                    <article>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <a href="#">
+                                                    <a href="#">
+                                                        <h4>Raymond Dragon</h4>
+                                                    </a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="http://via.placeholder.com/50x50" width="100%">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
                             </div>
                         </div>
-                        <div class="row article debug-layout">
-                            <div class="col-xs-12">
-                                <article>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <a href="#">
-                                                <a href="#">
-                                                    <h4>Raymond Dragon</h4>
-                                                </a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <img src="http://via.placeholder.com/50x50" width="100%">
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="row article debug-layout">
-                            <div class="col-xs-12">
-                                <article>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <a href="#">
-                                                <a href="#">
-                                                    <h4>Raymond Dragon</h4>
-                                                </a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <img src="http://via.placeholder.com/50x50" width="100%">
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="row article debug-layout">
-                            <div class="col-xs-12">
-                                <article>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <a href="#">
-                                                <a href="#">
-                                                    <h4>Raymond Dragon</h4>
-                                                </a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <img src="http://via.placeholder.com/50x50" width="100%">
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
+                        <!-- Tag cloud -->
+                        <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     </div>
-    <!-- Footer -->
-    <div class="clearfix"></div>
-    <footer class="footer mt-15 debug-layout">
-        <div class="row">
-            <div class="col-md-4 hidden-xs hidden-sm">
-                Indice sito
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-6">
-                <div class="row">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-rss"></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-6">
-                Copyright
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>
