@@ -27,5 +27,13 @@ $(document).ready(function () {
     var navbar = new PerfectScrollbar('nav.navbar');
     var articlesContainer = new PerfectScrollbar('#articles-container');
     var rightArticlesContainer = new PerfectScrollbar('#right-articles-container');
+
+    /* Make the input width fixed until click outside */
+    $("#search").on("click",function(){
+        $(this).closest(".form-group").addClass("hover");
+    });
+    $("#search").on("blur",function(){
+        $(this).closest(".form-group").removeClass("hover");
+    });
 });
 
