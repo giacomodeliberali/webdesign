@@ -32,17 +32,23 @@ nav.sidebar, .main{
 @media (min-width: 768px) {
 
     /*Allow main to be next to Nav*/
-    .main{
-        position: absolute;
-        width: calc(100% - 40px); /*keeps 100% minus nav size*/
+    .main,footer,footer .container{
+        /* position: absolute;
+        width: calc(100% - 40px); 
         margin-left: 40px;
-        float: right;
+        float: right; */
+        margin-left: 200px;
+        width: calc(100% - 200px); 
+    }
+    footer .container{
+        margin-left: 0px;
+        width: 100%;
     }
 
     /*lets nav bar to be showed on mouseover*/
-    nav.sidebar:hover + .main{
+    /* nav.sidebar:hover + .main{
         margin-left: 200px;
-    }
+    } */
 
     /*Center Brand*/
     nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
@@ -96,7 +102,7 @@ nav.sidebar, .main{
     nav.sidebar{
         width: 200px;
         height: 100%;
-        margin-left: -160px;
+        /* margin-left: -160px; */
         float: left;
         z-index: 8000;
         margin-bottom: 0px;
@@ -112,9 +118,9 @@ nav.sidebar, .main{
         margin-left: 0px;
     }
     /*for hiden things when navbar hidden*/
-    .forAnimate{
+    /* .forAnimate{
         opacity: 0;
-    }
+    } */
 }
 
 /* .....NavBar: Fully showing nav bar..... */
