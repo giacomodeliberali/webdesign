@@ -1,11 +1,19 @@
 .debug-layout{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background: rgba(0,0,0,0.2);
 }
 
 .container.main{
     height: 100%;
 }
+.col-no-padding{
+    padding-left: 0px;
+    padding-right: 0px; 
+}
+.col-no-dx-padding{
+    padding-right: 0px;
+}
+
 @media (max-width: 768px) {
     /* When mobile 100% - header height - footer height */
     .container.main{
@@ -13,9 +21,29 @@
     }
 }
 
-footer.footer{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+
+footer{
+    width: 100%;
+    height: 30px;
+}
+footer .row{
+    margin: 0px;
+}
+
+.form-group{
+    margin-bottom: 0px;
+}
+
+#userbox {
+    height: 32px;
+}
+#userbox .glyphicon{
+    top: calc(50% - 8px);
+}
+.row.article{
+    margin-top: 15px;
+}
+
+.mt-15{
+    margin-top: 15px;
 }

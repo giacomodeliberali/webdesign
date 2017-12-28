@@ -43,21 +43,26 @@
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active">
+                        <a href="#">News
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="#">Blog
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-pencil"></span>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#">Eventi
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#">Multimedia
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-film"></span>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#">Software
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
                         </a>
@@ -153,28 +158,28 @@
                     </li>
 
                     <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sistemi Operativi
-                                <span class="caret"></span>
-                                <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
-                            </a>
-                            <ul class="dropdown-menu forAnimate" role="menu">
-                                    <li>
-                                            <a href="#">iOS</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Android</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Windows</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Osx</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Linux</a>
-                                        </li>
-                            </ul>
-                        </li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sistemi Operativi
+                            <span class="caret"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+                        </a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li>
+                                <a href="#">iOS</a>
+                            </li>
+                            <li>
+                                <a href="#">Android</a>
+                            </li>
+                            <li>
+                                <a href="#">Windows</a>
+                            </li>
+                            <li>
+                                <a href="#">Osx</a>
+                            </li>
+                            <li>
+                                <a href="#">Linux</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="#">Videogiochi
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
@@ -195,69 +200,279 @@
     <div class="container main">
         <!-- Main row container -->
         <div class="row">
-            <div class="col-xs-12">
-                    <!-- Horizontal navbar -->
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="row">
-                                <div class="col-md-9 col-md-offset-3">
-                                    <form action="" class="search-form">
-                                        <div class="form-group has-feedback">
-                                            <label for="search" class="sr-only">Search</label>
-                                            <input type="text" class="form-control" name="search" id="search" placeholder="search">
-                                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        
-                        
-                        
-                        
-                        
-                        </div>
-                        <div class="col-md-3">
-                            <span class="glyphicon glyphicon-user"></span>
-                        </div>    
-                    </div>
-                    <!-- Content here --> 
-                    <div class="row">
-                        <div class="col-sm-12 col-md-9 debug-layout">
-                            Content here
-                        </div>
-                        <div class="col-md-3 hidden-sm hidden-xs debug-layout">
-                            Right sidebar
-                        </div>
-                    </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="footer debug-layout">
-            <div class="container">
+            <div class="col-xs-12 col-no-padding">
+                <!-- Horizontal navbar -->
                 <div class="row">
-                    <div class="col-md-4 hidden-xs hidden-sm">
-                        Indice sito
+                    <div class="col-md-9 text-right debug-layout">
+                        <!-- Search box -->
+                            <form action="" class="search-form" style="max-width: 300px">
+                                    <div class="form-group has-feedback">
+                                        <label for="search" class="sr-only">Search</label>
+                                        <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                    </div>
+                                </form>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-6">
-                        <div class="row">
-                            <a href="#" class="fa fa-facebook"></a>
-                            <a href="#" class="fa fa-youtube"></a>
-                            <a href="#" class="fa fa-instagram"></a>
-                            <a href="#" class="fa fa-rss"></a>
-
-
-
+                    <div class="col-md-3 text-right debug-layout" id="userbox">
+                            <!-- User box -->
+                        <span class="glyphicon glyphicon-user"></span>
+                    </div>
+                </div>
+                <!-- Content here -->
+                <div class="row">
+                    <!-- Main articles -->
+                    <div class="col-sm-12 col-md-9 col-no-padding" id="article-container">
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <figure>
+                                                <img src="http://via.placeholder.com/200x100" width="100%">
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-6 col-md-8">
+                                            <a href="#">
+                                                <h4>Raymond Dragon</h4>
+                                            </a>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-6">
-                        Copyright
+                    <!-- Right articles -->
+                    <div class="col-md-3 hidden-sm hidden-xs col-no-dx-padding">
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <a href="#">
+                                                <a href="#">
+                                                    <h4>Raymond Dragon</h4>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <img src="http://via.placeholder.com/50x50" width="100%">
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <a href="#">
+                                                <a href="#">
+                                                    <h4>Raymond Dragon</h4>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <img src="http://via.placeholder.com/50x50" width="100%">
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <a href="#">
+                                                <a href="#">
+                                                    <h4>Raymond Dragon</h4>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <img src="http://via.placeholder.com/50x50" width="100%">
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12">
+                                <article>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <a href="#">
+                                                <a href="#">
+                                                    <h4>Raymond Dragon</h4>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <img src="http://via.placeholder.com/50x50" width="100%">
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
 
+
+    </div>
+    <!-- Footer -->
+    <div class="clearfix"></div>
+    <footer class="footer mt-15 debug-layout">
+        <div class="row">
+            <div class="col-md-4 hidden-xs hidden-sm">
+                Indice sito
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <div class="row">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-rss"></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                Copyright
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
