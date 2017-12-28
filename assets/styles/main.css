@@ -5,6 +5,7 @@
 
 .container.main{
     height: 100%;
+    position: relative;
 }
 
 /* Removes the padding from bootstrap columns */
@@ -30,23 +31,23 @@
 
 /* Articles */
 .row.article{
-    margin-top: 15px;
+    margin-bottom: 15px;
 }
 @media (max-width: 768px) {
     /* Until mobile main container height is => 100% - header height - footer height */
     .container.main{
-        height: calc(100% - 50px - 30px) !important; 
+        height: calc(100% - 52px) !important; 
     }
 }
 @media (min-width: 992px) {
     /* Set the scrollbar for right and left articles container */
     #articles-container,#right-content{
-        height: calc(100vh - 42px);
+        height: calc(100vh - 42px - 15px);
         overflow-y: auto;
         position: relative;
     }
     #right-articles-container{
-        height: calc(100vh - 342px); /* 100vh - tag cloud height*/
+        height: calc(100vh - 342px - 15px); /* 100vh - tag cloud height*/
         overflow-y: auto;
         position: relative;
     }
@@ -75,4 +76,15 @@ footer .row{
 .navbar{
     margin-bottom: 0px;
     overflow-y: auto;
+}
+
+
+/* Back to top button*/
+#backToTop{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 100%;
+    color: white;
+    background:rgba(0,0,0,0.8);
 }
