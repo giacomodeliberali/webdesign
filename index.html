@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/styles/sidebar.css">
     <link rel="stylesheet" href="./assets/styles/searchbar.css">
     <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="stylesheet" href="./assets/styles/jqcloud.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -23,6 +24,7 @@
         crossorigin="anonymous"></script>
     <script src="./assets/scripts/sidebar.js"></script>
     <script src="./assets/scripts/perfect-scrollbar.min.js"></script>
+    <script src="./assets/scripts/jqcloud.min.js"></script>
 
     <title>Web design</title>
 </head>
@@ -689,7 +691,8 @@
                             </div>
                         </div>
                         <!-- Tag cloud -->
-                        <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/>
+                        <div id="tag-cloud"></div>
+                        <!-- <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/> -->
                     </div>
                 </div>
             </div>
@@ -697,5 +700,8 @@
     </div>
     </div>
 </body>
-<button id="backToTop" class="btn btn-sm"><i class="fa fa-arrow-up"></i></button>
+<button id="backToTop" class="btn btn-sm">
+    <i class="fa fa-arrow-up"></i>
+</button>
+
 </html>
