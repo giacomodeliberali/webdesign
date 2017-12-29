@@ -1,6 +1,13 @@
+body{
+    background-color: #E0E0E0;
+}
+
 .debug-layout{
     /* border: 1px solid black; */
-    background: rgba(0,0,0,0.2);
+    background: #FAFAFA;
+    -webkit-box-shadow: 11px 10px 25px -10px rgba(0,0,0,0.50);
+    -moz-box-shadow: 11px 10px 25px -10px rgba(0,0,0,0.50);
+    box-shadow: 11px 10px 25px -10px rgba(0,0,0,0.50);
 }
 
 .container.main{

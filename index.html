@@ -6,28 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Include CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/styles/perfect-scrollbar.css">
+    <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/vendor/perfect-scrollbar.css">
     <link rel="stylesheet" href="./assets/styles/sidebar.css">
     <link rel="stylesheet" href="./assets/styles/searchbar.css">
     <link rel="stylesheet" href="./assets/styles/main.css">
-    <link rel="stylesheet" href="./assets/styles/jqcloud.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/vendor/jqcloud.min.css">
 
 
     <!-- Include JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+    <script src="./assets/vendor/jquery-3.2.1.min.js"></script>
+    <script src="./assets/vendor/bootstrap.min.js"></script>
     <script src="./assets/scripts/sidebar.js"></script>
     <script src="./assets/scripts/searchbar.js"></script>
     <script src="./assets/scripts/tagcloud.js"></script>
     <script src="./assets/scripts/back-to-top.js"></script>
-    <script src="./assets/scripts/perfect-scrollbar.min.js"></script>
-    <script src="./assets/scripts/jqcloud.min.js"></script>
+    <script src="./assets/vendor/perfect-scrollbar.min.js"></script>
+    <script src="./assets/vendor/jqcloud.min.js"></script>
 
     <title>Web design</title>
 </head>
@@ -51,34 +47,46 @@
                 <ul class="nav navbar-nav">
                     <li class="active">
                         <a href="#">News
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-home"></i>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a href="#">Blog
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-pencil"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-pencil"></i>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a href="#">Eventi
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-calendar"></i>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a href="#">Multimedia
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-film"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-film"></i>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a href="#">Software
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-home"></i>
+                            </span>
                         </a>
                     </li>
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Algoritmi
                             <span class="caret"></span>
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-user"></i>
+                            </span>
                         </a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li>
@@ -101,7 +109,9 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hardware
                             <span class="caret"></span>
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-cog"></i>
+                            </span>
                         </a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li>
@@ -122,7 +132,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hack
                             <span class="caret"></span>
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-education"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                    <i class="fa fa-graduation-cap"></i></span>
                         </a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li>
@@ -146,7 +157,9 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linguaggi
                             <span class="caret"></span>
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-language"></i>
+                            </span>
                         </a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li>
@@ -167,7 +180,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sistemi Operativi
                             <span class="caret"></span>
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                    <i class="fa fa-windows"></i></span>
                         </a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li>
@@ -189,12 +203,14 @@
                     </li>
                     <li>
                         <a href="#">Videogiochi
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                    <i class="fa fa-gamepad"></i></span>
                         </a>
                     </li>
                     <li>
                         <a href="#">Servizi
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                    <i class="fa fa-envelope"></i></span>
                         </a>
                     </li>
                 </ul>
