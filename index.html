@@ -245,20 +245,56 @@
                 <div class="row">
                 <script>
                 		var titles=new Array();
-                		titles.push("Buffer Overflow");
-                		titles.push("Pixel 2: Il migliore?");
-                		titles.push("iPhone X: vulnerabilità sullo sblocco");
-                		titles.push("Ubuntu phone: innovazione.");
-                		titles.push("Migliorie all'algoritmo di Dijkstra");
-                		titles.push("iMac Pro: stellare");
-                		titles.push("Android 7: tutte le features");
-                		titles.push("Go: il linguaggio Google più smart");
-                		titles.push("Nuovi benchmark sui browser");
-                		titles.push("Watchdogs");
-                		titles.push("call of duty WW2 e il suo motore grafico");
-                		titles.push("Kerberos: log in remoto");
+                		titles.push({	title:"Buffer Overflow",
+                						scrLg:"",
+                						srcSm:""});
+                		
+                		titles.push({	title:"Pixel 2: Il migliore?",
+                						scrLg:"http://vnreview.vn/thumbs/180x100/16/97/89/1697898.jpg",
+                						srcSm:"https://gd1.alicdn.com/imgextra/i4/2245691027/TB2nMqTevBNTKJjSszeXXcu2VXa_!!2245691027.png_50x50.jpg"});
+                		
+                		titles.push({	title:"iPhone X: vulnerabilità sullo sblocco",
+                						scrLg:"https://www.wired.com/wp-content/uploads/2017/09/wired_up-close-and-personal-with-the-new-iphone-x-1-200x100.jpg",
+                						srcSm:""});
+                		
+                		titles.push({	title:"Ubuntu phone: innovazione.",
+                						scrLg:"https://www.wired.com/wp-content/uploads/2015/02/ubuntu-inline21-200x100.jpg",
+                						srcSm:""});
+                		
+                		titles.push({	title:"Migliorie all'algoritmo di Dijkstra",
+                						scrLg:"",
+                						srcSm:""});
+                		
+                		titles.push({	title:"iMac Pro: stellare",
+                						scrLg:"",
+                						srcSm:""});
+                		
+                		titles.push({	title:"Android 7: tutte le features",
+                						scrLg:"https://www.mobilmania.cz/GetThumbNail.aspx?q=90&crop=1&height=100&width=200&id_file=908728386",
+                						srcSm:""});
+                		
+                		titles.push({	title:"Go: il linguaggio Google più smart",
+                						scrLg:"",
+                						srcSm:""});
+                		
+                		titles.push({	title:"Nuovi benchmark sui browser",
+                						scrLg:"http://www.erpreports.com/dart4/images/dart_browsers.jpg",
+                						srcSm:""});
+                		
+                		titles.push({	title:"Watchdogs",
+                						scrLg:"https://vignette.wikia.nocookie.net/steamtradingcards/images/8/82/Watch_Dogs_Logo.jpg/revision/latest/window-crop/width/200/x-offset/16/y-offset/0/window-width/431/window-height/215?cb=20160116061455",
+                						srcSm:"https://ae01.alicdn.com/kf/HTB1iOhUPVXXXXauapXXq6xXFXXXW/00-Watch-Dogs-2-Dedsec-Aiden-Pearce-Wrench-Mask-Helmet-Eyepatch-Face-Muffle-Cosplay.jpg_50x50.jpg"});
+                		
+                		titles.push({	title:"call of duty WW2 e il suo motore grafico",
+                						scrLg:"https://gamecloud.r.worldssl.net/wp-content/uploads/2017/10/CoD-WWII-Featured-Image-200x100.jpg",
+                						srcSm:""});
+                		
+                		titles.push({	title:"Kerberos: log in remoto",
+                						scrLg:"",
+                						srcSm:""});
+                		
 
-                		function generateMainArticleHtml(stringTitle){
+                		function generateMainArticleHtml(objectTitle){
                 			return `
                                 <div class="row article debug-layout">
                                     <div class="col-xs-12">
@@ -266,13 +302,15 @@
                                             <div class="row">
                                                 <div class="col-sm-6 col-md-4">
                                                     <figure>
-                                                        <img src="http://via.placeholder.com/200x100" width="100%">
+                                                        <img src="`+ 
+                                                        objectTitle.scrLg
+                                                        +`" width="100%">
                                                     </figure>
                                                 </div>
                                                 <div class="col-sm-6 col-md-8">
                                                     <a href="#">
                                                         <h4>`+
-                                                        stringTitle
+                                                        objectTitle.title
                                                         +`</h4>
                                                     </a>
                                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
@@ -332,7 +370,7 @@
                                                         <a href="#">
                                                             <a href="#">
                                                                 <h4>`+
-                                                                stringTitle
+                                                                stringTitle.title;
                                                                 +`</h4>
                                                             </a>
                                                         </a>
@@ -340,7 +378,9 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-12">
-                                                        <img src="http://via.placeholder.com/50x50" width="100%">
+                                                        <img src="`+
+                                                        	stringTitle.srcSm;
+                                                        +`" width="100%">
                                                     </div>
                                                 </div>
                                             </article>
