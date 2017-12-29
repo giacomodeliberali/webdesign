@@ -258,10 +258,8 @@
                 		titles.push("call of duty WW2 e il suo motore grafico");
                 		titles.push("Kerberos: log in remoto");
 
-
-
-                        $(document).ready(function(){
-                            var html = `
+                		function generateMainArticleHtml(stringTitle){
+                			return `
                                 <div class="row article debug-layout">
                                     <div class="col-xs-12">
                                         <article>
@@ -273,7 +271,9 @@
                                                 </div>
                                                 <div class="col-sm-6 col-md-8">
                                                     <a href="#">
-                                                        <h4>Raymond Dragon</h4>
+                                                        <h4>`+
+                                                        stringTitle
+                                                        +`</h4>
                                                     </a>
                                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
                                                         euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
@@ -283,8 +283,13 @@
                                     </div>
                                 </div>
                             `;
+                		}
+
+                        $(document).ready(function(){
+                            
                             for(var i=0; i<20;i++)
-                                $("#articles-container").html($("#articles-container").html()+html);
+                                $("#articles-container").html($("#articles-container").html()+
+                                	generateMainArticleHtml(titles[Math.floor( Math.random()*(titles.length) )]));
 
                             var footer = `
                                 <footer class="footer debug-layout">
@@ -317,7 +322,7 @@
                     <!-- Right articles -->
                     <div class="col-md-3 hidden-sm hidden-xs col-no-padding mt-15" id="right-content">
                     <script>
-                            function generateHtml(stringTitle){
+                            function generateRelatedArticleHtml(stringTitle){
                             	return `
                                     <div class="row article debug-layout">
                                         <div class="col-xs-12">
@@ -347,7 +352,7 @@
                             $(document).ready(function(){
                                 
                                 for(var i=0; i<20;i++)
-                                    $("#right-articles-container").html($("#right-articles-container").html()+generateHtml(titles[Math.floor( Math.random()*(titles.length) )]));
+                                    $("#right-articles-container").html($("#right-articles-container").html()+generateRelatedArticleHtml(titles[Math.floor( Math.random()*(titles.length) )]));
                             });
                         </script>
                         <div id="right-articles-container">
