@@ -244,6 +244,22 @@
                 <!-- Content here -->
                 <div class="row">
                 <script>
+                		var titles=new Array();
+                		titles.push("Buffer Overflow");
+                		titles.push("Pixel 2: Il migliore?");
+                		titles.push("iPhone X: vulnerabilità sullo sblocco");
+                		titles.push("Ubuntu phone: innovazione.");
+                		titles.push("Migliorie all'algoritmo di Dijkstra");
+                		titles.push("iMac Pro: stellare");
+                		titles.push("Android 7: tutte le features");
+                		titles.push("Go: il linguaggio Google più smart");
+                		titles.push("Nuovi benchmark sui browser");
+                		titles.push("Watchdogs");
+                		titles.push("call of duty WW2 e il suo motore grafico");
+                		titles.push("Kerberos: log in remoto");
+
+
+
                         $(document).ready(function(){
                             var html = `
                                 <div class="row article debug-layout">
@@ -301,8 +317,8 @@
                     <!-- Right articles -->
                     <div class="col-md-3 hidden-sm hidden-xs col-no-padding mt-15" id="right-content">
                     <script>
-                            $(document).ready(function(){
-                                var html = `
+                            function generateHtml(stringTitle){
+                            	return `
                                     <div class="row article debug-layout">
                                         <div class="col-xs-12">
                                             <article>
@@ -310,7 +326,9 @@
                                                     <div class="col-xs-12">
                                                         <a href="#">
                                                             <a href="#">
-                                                                <h4>Raymond Dragon</h4>
+                                                                <h4>`+
+                                                                stringTitle
+                                                                +`</h4>
                                                             </a>
                                                         </a>
                                                     </div>
@@ -324,8 +342,12 @@
                                         </div>
                                     </div>
                                 `;
+                            }
+
+                            $(document).ready(function(){
+                                
                                 for(var i=0; i<20;i++)
-                                    $("#right-articles-container").html($("#right-articles-container").html()+html);
+                                    $("#right-articles-container").html($("#right-articles-container").html()+generateHtml(titles[Math.floor( Math.random()*(titles.length) )]));
                             });
                         </script>
                         <div id="right-articles-container">
