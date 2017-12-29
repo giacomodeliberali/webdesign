@@ -12,6 +12,10 @@ function htmlbodyHeightUpdate() {
     }
 
 }
+var navbarScrollbar;
+var articlesContainerScrollbar;
+var rightArticlesContainerScrollbar;
+
 $(document).ready(function () {
     htmlbodyHeightUpdate()
     $(window).resize(function () {
@@ -22,16 +26,28 @@ $(document).ready(function () {
         htmlbodyHeightUpdate()
     });
 
-    // perfect scrollbar
-    // var navbar = new PerfectScrollbar('nav.navbar');
-    // var articlesContainer = new PerfectScrollbar('#articles-container');
-    // var rightArticlesContainer = new PerfectScrollbar('#right-articles-container');
-    // var mainContainer = new PerfectScrollbar('.container.main');
+    // Initialize perfect scrollbars
+    navbarScrollbar = new PerfectScrollbar('nav.navbar');
+    articlesContainerScrollbar = new PerfectScrollbar('#articles-container');
+    rightArticlesContainerScrollbar = new PerfectScrollbar('#right-articles-container');
 
-    // window.onresize = function(){
-    //     navbar.update();
-    //     articlesContainer.update();
-    //     rightArticlesContainer.update();
-    //     mainContainer.update();
-    // };
+    $(window).on("resize",function(){
+        updateScrollbars();
+    });
+    updateScrollbars();
 });
+
+function updateScrollbars() {
+    // perfect scrollbar
+    var navbarElement = $("nav.navbar").first();
+    var articlesContainerElement = $("#articles-container").first();
+    var rightArticlesContainerElement = $("#right-articles-container").first();
+
+    navbarElement.scrollTop(0);
+    articlesContainerElement.scrollTop(0);
+    rightArticlesContainerElement.scrollTop(0);
+
+    navbarScrollbar.update();
+    articlesContainerScrollbar.update();
+    rightArticlesContainerScrollbar.update();
+}

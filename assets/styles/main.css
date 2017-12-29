@@ -11,7 +11,7 @@ body{
 }
 
 ::-webkit-scrollbar { 
-    display: none; 
+    /* display: none;  */
 }
 
 .container.main{
@@ -25,9 +25,19 @@ body{
     padding-right: 0px; 
 }
 .col-no-padding{
+    padding-left: 0px;
+    padding-right: 0px; 
+}
+
+.col-no-right-padding{
     padding-left: 15px;
     padding-right: 0px; 
 }
+.col-no-left-padding{
+    padding-left: 0px;
+    padding-right: 15px; 
+}
+
 /* Removes the right padding from bootstrap columns */
 #right-articles-container{
     padding-right: 15px;
@@ -51,19 +61,32 @@ body{
 .row.article{
     margin-bottom: 15px;
 }
+
+#articles-container,
+#right-content {
+    height: calc(100vh - 42px - 15px - 77px);
+    overflow-y: auto;
+    position: relative;
+}
+
 @media (max-width: 768px) {
     /* Until mobile main container height is => 100% - header height - footer height */
     .container.main{
-        height: calc(100% - 52px - 20px) !important; 
+        height: calc(100% - 52px) !important; 
+    }
+
+    #articles-container,#right-content{
+        height: calc(100vh - 42px - 15px - 125px);
     }
 }
+
+
 @media (min-width: 992px) {
     /* Set the scrollbar for right and left articles container */
     #articles-container,#right-content{
         height: calc(100vh - 42px - 15px - 20px);
-        overflow-y: auto;
-        position: relative;
     }
+
     #right-articles-container{
         height: calc(100vh - 342px - 15px - 20px); /* 100vh - tag cloud height*/
         overflow-y: auto;
@@ -84,7 +107,7 @@ footer .row{
 /* Tag clud */
 #tag-cloud{
     height: 270px;
-    width: calc(100% - 30px);
+    width: calc(100% - 15px);
     position: absolute;
     margin-top: 15px;
 }
