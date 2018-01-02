@@ -139,7 +139,7 @@ footer .row  div * {
 /* Back to top button*/
 #backToTop{
     position: fixed;
-    bottom: 15px;
+    bottom: 50px;
     right: 15px;
     border-radius: 100%;
     color: white;
