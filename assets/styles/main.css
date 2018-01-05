@@ -41,6 +41,8 @@ body{
 /* Removes the right padding from bootstrap columns */
 #right-articles-container{
     padding-right: 15px;
+    position: relative;
+    height: calc(100vh - 342px - 15px - 20px - 30px); /* 100vh - tag cloud height*/
 }
 
 /* Utility class */
@@ -64,7 +66,7 @@ body{
 
 #articles-container,
 #right-content {
-    height: calc(100vh - 42px - 15px - 77px - 25px);
+    height: calc(100vh - 42px - 15px - 55px);
     overflow-y: auto;
     position: relative;
 }
@@ -85,7 +87,7 @@ footer .row  div * {
     height: 30px;
     line-height: 30px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     footer{
         left: 200px;
         width: calc(100% - 200px);
@@ -98,9 +100,10 @@ footer .row  div * {
         height: calc(100vh - 50px - 30px) !important;
     }
 
-    #articles-container{
+    #articles-container,
+    #right-content{
         /* When mobile articles container height is => 100vh - header height - footer height - horizontal navbar height and padding */
-        height: calc(100vh - 50px - 30px - 104px - 28px);
+        height: calc(100vh - 50px - 30px - 80px);
     }
 }
 

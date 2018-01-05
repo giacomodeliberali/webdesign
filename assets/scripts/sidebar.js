@@ -12,14 +12,33 @@ function htmlbodyHeightUpdate() {
     }
 
 }
+
+function tabletSidebar(){
+    var width = $(window).width();
+    if(width <= 992 && width >= 768){
+        // tablet
+        
+    }
+}
+
 var navbarScrollbar;
 var articlesContainerScrollbar;
 var rightArticlesContainerScrollbar;
 
 $(document).ready(function () {
+    
+    $("#sidebarOpener").on("click",function(){
+        $("nav.navbar").toggleClass("tablet-open");
+    });
+    $("#sidebarCloser").on("click",function(){
+        $("nav.navbar").toggleClass("tablet-open");
+    });
+
     htmlbodyHeightUpdate()
     $(window).resize(function () {
-        htmlbodyHeightUpdate()
+        htmlbodyHeightUpdate();
+        tabletSidebar();
+        updateScrollbars();
     });
     $(window).scroll(function () {
         height2 = $('.main').height()
@@ -31,9 +50,6 @@ $(document).ready(function () {
     articlesContainerScrollbar = new PerfectScrollbar('#articles-container');
     rightArticlesContainerScrollbar = new PerfectScrollbar('#right-articles-container');
 
-    $(window).on("resize",function(){
-        updateScrollbars();
-    });
     updateScrollbars();
 });
 
