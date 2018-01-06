@@ -325,40 +325,30 @@
                     </div>
                     <!-- Right articles -->
                     <div class="col-md-3 col-sm-3 hidden-xs col-no-padding mt-15" id="right-content">
-                        <script>
-                            function generateRelatedArticleHtml(stringTitle) {
-                                return `
-                                    <div class="row article debug-layout">
-                                        <div class="col-xs-12">
-                                            <article>
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        <a href="#">
-                                                            <a href="#">
-                                                                <h4>${stringTitle.title}</h4>
-                                                            </a>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        <img class="img-responsive" src="${stringTitle.srcSm}" width="100%">
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                `;
-                            }
-
-                            $(document).ready(function () {
-
-                                for (var i = 0; i < 6; i++)
-                                    $("#right-articles-container").html($("#right-articles-container").html() + generateRelatedArticleHtml(titles[Math.floor(Math.random() * (titles.length))]));
-                            });
-                        </script>
+                        
+                            
+                       
                         <div id="right-articles-container">
-                            <!-- Articles printed by javascript here -->
+                           <div class="youtube-container">
+                                    <div class="youtube-player" data-id="wb1tkp7QCrI"></div>
+
+                                </div>
+                                <p>RECENSIONE PIXEL 2 XL con ASSISTENTE GOOGLE in Italiano</p>
+                          <div class="youtube-container">
+                                    <div class="youtube-player" data-id="wb1tkp7QCrI"></div>
+
+                                </div>
+                                <p>RECENSIONE PIXEL 2 XL con ASSISTENTE GOOGLE in Italiano</p>
+                          <div class="youtube-container">
+                                    <div class="youtube-player" data-id="wb1tkp7QCrI"></div>
+
+                                </div>
+                                <p>RECENSIONE PIXEL 2 XL con ASSISTENTE GOOGLE in Italiano</p>
+                          <div class="youtube-container">
+                                    <div class="youtube-player" data-id="wb1tkp7QCrI"></div>
+
+                                </div>
+                                <p>RECENSIONE PIXEL 2 XL con ASSISTENTE GOOGLE in Italiano</p>
                         </div>
                         <!-- Tag cloud -->
                         <div id="tag-cloud" class="debug-layout"></div>
