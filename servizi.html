@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Include CSS -->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/vendor/perfect-scrollbar.css">
+    <link rel="stylesheet" href="./assets/styles/sidebar.css">
+    <link rel="stylesheet" href="./assets/styles/searchbar.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="stylesheet" href="./assets/vendor/jqcloud.min.css">
+
+
+    <!-- Include JS -->
+    <script src="./assets/vendor/jquery-3.2.1.min.js"></script>
+    <script src="./assets/vendor/bootstrap.min.js"></script>
+    <script src="./assets/scripts/sidebar.js"></script>
+    <script src="./assets/scripts/searchbar.js"></script>
+    <script src="./assets/scripts/tagcloud.js"></script>
+    <script src="./assets/scripts/back-to-top.js"></script>
+    <script src="./assets/vendor/perfect-scrollbar.min.js"></script>
+    <script src="./assets/vendor/jqcloud.min.js"></script>
+
+    <title>Web design</title>
+</head>
+
+<body>
+<!-- Include navbar section -->
+<nav class="navbar navbar-inverse sidebar hidden-sm" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Brand</a>
+            <a class="btn btn-sm btn-flat hidden-xs hidden-md hidden-lg" id="sidebarCloser">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">News
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-home"></i>
+                            </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Blog
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-pencil"></i>
+                            </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Eventi
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Multimedia
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-film"></i>
+                            </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Software
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-heart"></i>
+                            </span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Algoritmi
+                        <span class="caret"></span>
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-linode"></i>
+                            </span>
+                    </a>
+                    <ul class="dropdown-menu forAnimate" role="menu">
+                        <li>
+                            <a href="#">Cammini minimi</a>
+                        </li>
+                        <li>
+                            <a href="#">Ordinamento</a>
+                        </li>
+                        <li>
+                            <a href="#">Decisionali</a>
+                        </li>
+                        <li>
+                            <a href="#">Ottimizzazione</a>
+                        </li>
+                        <!-- li class="divider"></li >
+                        <li><a href="#">Separated link</a></li-->
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hardware
+                        <span class="caret"></span>
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-cog"></i>
+                            </span>
+                    </a>
+                    <ul class="dropdown-menu forAnimate" role="menu">
+                        <li>
+                            <a href="#">Telefoni</a>
+                        </li>
+                        <li>
+                            <a href="#">Computer</a>
+                        </li>
+                        <li>
+                            <a href="#">Componenti</a>
+                        </li>
+                        <li>
+                            <a href="#">TV</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hack
+                        <span class="caret"></span>
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-graduation-cap"></i>
+                            </span>
+                    </a>
+                    <ul class="dropdown-menu forAnimate" role="menu">
+                        <li>
+                            <a href="#">Zero days</a>
+                        </li>
+                        <li>
+                            <a href="#">Trivial Mode</a>
+                        </li>
+                        <li>
+                            <a href="#">Tricky Mode</a>
+                        </li>
+                        <li>
+                            <a href="#">Web</a>
+                        </li>
+                        <li>
+                            <a href="#">Bit per Bit</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linguaggi
+                        <span class="caret"></span>
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-language"></i>
+                            </span>
+                    </a>
+                    <ul class="dropdown-menu forAnimate" role="menu">
+                        <li>
+                            <a href="#">Python</a>
+                        </li>
+                        <li>
+                            <a href="#">Go</a>
+                        </li>
+                        <li>
+                            <a href="#">Ruby</a>
+                        </li>
+                        <li>
+                            <a href="#">Java</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sistemi Operativi
+                        <span class="caret"></span>
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-windows"></i>
+                            </span>
+                    </a>
+                    <ul class="dropdown-menu forAnimate" role="menu">
+                        <li>
+                            <a href="#">iOS</a>
+                        </li>
+                        <li>
+                            <a href="#">Android</a>
+                        </li>
+                        <li>
+                            <a href="#">Windows</a>
+                        </li>
+                        <li>
+                            <a href="#">Osx</a>
+                        </li>
+                        <li>
+                            <a href="#">Linux</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Videogiochi
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-gamepad"></i>
+                            </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Servizi
+                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Content -->
+<div class="container main">
+    <!-- Main row container -->
+    <div class="row">
+        <div class="col-xs-12 col-no-padding">
+            <!-- Horizontal navbar -->
+            <div class="row debug-layout">
+                <div class="col-sm-1 hidden-xs hidden-md hidden-lg" style="height: 52px">
+                    <button class="btn btn-float btn-sm pull-left" id="sidebarOpener">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col-md-11 col-sm-10 col-xs-11 text-right padding-10">
+                    <!-- Search box -->
+                    <form action="" class="search-form" style="max-width: 100%">
+                        <div class="form-group has-feedback">
+                            <label for="search" class="sr-only">Search</label>
+                            <input type="text" class="form-control" name="search" id="search" placeholder="Cerca...">
+                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-1 col-xs-1 text-right padding-10" id="userbox">
+                    <!-- User box -->
+                    <a href="login.html"><span class="glyphicon glyphicon-user"></span></a>
+                </div>
+            </div>
+            <!-- Content here -->
+            <div class="row">
+
+                <script>
+                    var titles = new Array();
+                    titles.push({
+                        title: "Buffer Overflow",
+                        scrLg: "http://www.biosmicrosystems.com/edu/images/itsec.gif",
+                        srcSm: "http://www.level3.com/_assets/build/img/icon/lockicon.png"
+                    });
+
+                    titles.push({
+                        title: "Pixel 2: Il migliore?",
+                        scrLg: "http://vnreview.vn/thumbs/180x100/16/97/89/1697898.jpg",
+                        srcSm: "https://gd1.alicdn.com/imgextra/i4/2245691027/TB2nMqTevBNTKJjSszeXXcu2VXa_!!2245691027.png_50x50.jpg"
+                    });
+
+                    titles.push({
+                        title: "iPhone X: vulnerabilità sullo sblocco",
+                        scrLg: "https://www.wired.com/wp-content/uploads/2017/09/wired_up-close-and-personal-with-the-new-iphone-x-1-200x100.jpg",
+                        srcSm: "https://www.sv-comp.com/image/cache/catalog/data/apple_logo-50x50.jpg"
+                    });
+
+                    titles.push({
+                        title: "Ubuntu phone: innovazione.",
+                        scrLg: "https://www.wired.com/wp-content/uploads/2015/02/ubuntu-inline21-200x100.jpg",
+                        srcSm: "https://www.virtualmaster.com/assets/logo/logo-ubuntu_cof-orange-hex_50-50-332f5ad5ac6e9988a152dbc6d42d6fc3.png"
+                    });
+
+                    titles.push({
+                        title: "Migliorie all'algoritmo di Dijkstra",
+                        scrLg: "http://www.matthew-scott.com/prj/javanoginn/graph2.gif",
+                        srcSm: "https://lh3.googleusercontent.com/UIRYYyODh86K2tpvtNPxw1w_fll5vXHZnso0j1Llki_iH8p3JVdZ1ZEyl04T5Xen4pAZZUv1SUQ=w50-h50-e365"
+                    });
+
+                    titles.push({
+                        title: "iMac Pro: stellare",
+                        scrLg: "https://www.zive.cz/getthumbnail.aspx?q=90&crop=1&height=100&width=200&id_file=371662363",
+                        srcSm: "https://www.sv-comp.com/image/cache/catalog/data/apple_logo-50x50.jpg"
+                    });
+
+                    titles.push({
+                        title: "Android 7: tutte le features",
+                        scrLg: "https://www.mobilmania.cz/GetThumbNail.aspx?q=90&crop=1&height=100&width=200&id_file=908728386",
+                        srcSm: "http://kissfm.com.au/wp-content/uploads/2013/08/Android-icon.png"
+                    });
+
+                    titles.push({
+                        title: "Go: il linguaggio Google più smart",
+                        scrLg: "https://media.licdn.com/mpr/mpr/shrink_200_100/AAEAAQAAAAAAAAidAAAAJDRlZDVhZGI0LTg5OTktNGZiYS05ZTVhLTA5OWQ4YmJmNDViZg.png",
+                        srcSm: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Googlelogoi.png/50px-Googlelogoi.png"
+                    });
+
+                    titles.push({
+                        title: "Nuovi benchmark sui browser",
+                        scrLg: "http://www.erpreports.com/dart4/images/dart_browsers.jpg",
+                        srcSm: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Firefox_Logo%2C_2017.svg/50px-Firefox_Logo%2C_2017.svg.png"
+                    });
+
+                    titles.push({
+                        title: "Watchdogs",
+                        scrLg: "https://vignette.wikia.nocookie.net/steamtradingcards/images/8/82/Watch_Dogs_Logo.jpg/revision/latest/window-crop/width/200/x-offset/16/y-offset/0/window-width/431/window-height/215?cb=20160116061455",
+                        srcSm: "https://ae01.alicdn.com/kf/HTB1iOhUPVXXXXauapXXq6xXFXXXW/00-Watch-Dogs-2-Dedsec-Aiden-Pearce-Wrench-Mask-Helmet-Eyepatch-Face-Muffle-Cosplay.jpg_50x50.jpg"
+                    });
+
+                    titles.push({
+                        title: "call of duty WW2 e il suo motore grafico",
+                        scrLg: "https://gamecloud.r.worldssl.net/wp-content/uploads/2017/10/CoD-WWII-Featured-Image-200x100.jpg",
+                        srcSm: "https://usercontent1.hubstatic.com/12809778_50.jpg"
+                    });
+
+                    titles.push({
+                        title: "Nvidia gtx 1080 è VR ready ",
+                        scrLg: "https://images.nvidia.com/pascal/img/gtx1080/vr-ready-logo.png",
+                        srcSm: "https://static-cdn.jtvnw.net/jtv_user_pictures/nvidiageforcede-profile_image-64f12030b4ecc178-50x50.png"
+                    });
+
+                </script>
+                <!-- Main articles -->
+                <div class="col-xs-12 col-sm-9 col-md-9 col-no-left-padding mt-15" id="articles-container">
+                    <div class="row ">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0 text-center mt-15">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <button type="button" class="btn-primary btn-block btn-lg">Servizi</button>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-6 text-center mt-15">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <button type="button" class="btn-primary btn-block btn-lg">Lavora con noi</button>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-6 text-center mt-15">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <button type="button" class="btn-primary btn-block btn-lg">Invia materiali</button>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-6 text-center mt-15">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <button type="button" class="btn-primary btn-block btn-lg">Contattaci</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Right articles -->
+                <div class="col-md-3 col-sm-3 hidden-xs col-no-padding mt-15" id="right-content">
+                    <script>
+                        function generateRelatedArticleHtml(stringTitle) {
+                            return `
+                                    <div class="row article debug-layout">
+                                        <div class="col-xs-12">
+                                            <article>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a href="#">
+                                                            <a href="#">
+                                                                <h4>${stringTitle.title}</h4>
+                                                            </a>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <img class="img-responsive" src="${stringTitle.srcSm}" width="100%">
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                `;
+                        }
+
+                        $(document).ready(function () {
+
+                            for (var i = 0; i < 4; i++)
+                                $("#right-articles-container").html($("#right-articles-container").html() + generateRelatedArticleHtml(titles[Math.floor(Math.random() * (titles.length))]));
+                        });
+                    </script>
+                    <div id="right-articles-container">
+                        <!-- Articles printed by javascript here -->
+                    </div>
+                    <!-- Tag cloud -->
+                    <div id="tag-cloud" class="debug-layout"></div>
+                    <!-- <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="backToTop" class="btn btn-sm">
+    <i class="fa fa-arrow-up"></i>
+</button>
+<footer class="footer debug-layout">
+    <div class="row">
+        <div class="col-md-4 hidden-xs hidden-sm text-center">
+            <div>Indice sito</div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-6 text-center">
+            <div class="row">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-rss"></a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-6 text-center">
+            <div>Copyright &copy; 2018</div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
