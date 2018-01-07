@@ -165,12 +165,22 @@ section{
 .tablet-open{
     display: block !important;
     position: absolute;
+    top: 62px;
+    left: 25px;
+    height: calc(80vh) !important;
+    width: 400px !important;
 }
 
 #sidebarOpener{
     background: transparent;
     font-size: 24px;
     height: 55px;
+    
+    outline: none;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
 }
 #sidebarCloser{
     position: absolute;
