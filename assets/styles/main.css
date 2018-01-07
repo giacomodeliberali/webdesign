@@ -194,9 +194,8 @@ a {
 
 .youtube-container {
     display: block;
-    margin: 20px auto;
+    margin: 0px 0px 10px 0px;
     width: 100%;
-    max-width: 600px;
 }
 
 .youtube-player {
