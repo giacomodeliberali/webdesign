@@ -26,7 +26,7 @@
     <script src="./assets/vendor/perfect-scrollbar.min.js"></script>
     <script src="./assets/vendor/jqcloud.min.js"></script>
 
-    <title>Web design - Login</title>
+    <title>Web design - Software</title>
 </head>
 
 <body>
@@ -42,6 +42,9 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">Brand</a>
+                <a class="btn btn-sm btn-flat hidden-xs hidden-md hidden-lg" id="sidebarCloser">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
@@ -74,7 +77,7 @@
                             </span>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="categoria.html">Software
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
                                 <i class="fa fa-heart"></i>
@@ -237,9 +240,9 @@
                         </button>
                     </div>
                     <div class="col-xs-4" style="height: 52px">
-                        <h4 style="line-height: 35px">Login</h5>
+                        <h4 style="line-height: 35px">Software</h5>
                     </div>
-                    <div class="col-md-8 col-sm-7 col-xs-8 padding-10 text-right">
+                    <div class="col-md-7 col-sm-6 col-xs-7 padding-10">
                         <!-- Search box -->
                         <form action="" class="search-form" style="max-width: 100%">
                             <div class="form-group has-feedback">
@@ -249,97 +252,140 @@
                             </div>
                         </form>
                     </div>
+                    <div class="col-sm-1 col-xs-1 text-center padding-10" id="userbox">
+                        <!-- User box -->
+                        <a href="login.html">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Content here -->
+                <div class="row">
+                    <script>
+                        var titles = new Array();
+
+                        titles.push({
+                            title: "Migliorie all'algoritmo di Dijkstra",
+                            scrLg: "http://www.matthew-scott.com/prj/javanoginn/graph2.gif",
+                            srcSm: "https://lh3.googleusercontent.com/UIRYYyODh86K2tpvtNPxw1w_fll5vXHZnso0j1Llki_iH8p3JVdZ1ZEyl04T5Xen4pAZZUv1SUQ=w50-h50-e365"
+                        });
+
+                        titles.push({
+                            title: "Go: il linguaggio Google più smart",
+                            scrLg: "https://media.licdn.com/mpr/mpr/shrink_200_100/AAEAAQAAAAAAAAidAAAAJDRlZDVhZGI0LTg5OTktNGZiYS05ZTVhLTA5OWQ4YmJmNDViZg.png",
+                            srcSm: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Googlelogoi.png/50px-Googlelogoi.png"
+                        });
+
+                        titles.push({
+                            title: "Nuovi benchmark sui browser",
+                            scrLg: "http://www.erpreports.com/dart4/images/dart_browsers.jpg",
+                            srcSm: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Firefox_Logo%2C_2017.svg/50px-Firefox_Logo%2C_2017.svg.png"
+                        });
+
+
+
+                        function generateMainArticleHtml(objectTitle) {
+                            return `
+                                <div class="row article debug-layout">
+                                    <div class="col-xs-12">
+                                        <article>
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-4">
+                                                    <figure>
+                                                        <img class="img-responsive" src="${objectTitle.scrLg}" width="100%">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-sm-6 col-md-8">
+                                                    <a href="#">
+                                                        <h4>${objectTitle.title}</h4>
+                                                    </a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        $(document).ready(function () {
+
+                            for (var i = 0; i < titles.length; i++)
+                                $("#articles-container").html($("#articles-container").html() +
+                                    generateMainArticleHtml(titles[i]));
+                        });
+                    </script>
+                    <!-- Main articles -->
+                    <div class="col-xs-12 col-sm-9 col-md-9 col-no-left-padding mt-15" id="articles-container">
+                        <div class="row article debug-layout">
+                            <div class="col-xs-12 padding-10">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="btn-group btn-breadcrumb">
+                                            <a href="index.html" class="btn btn-default">
+                                                <i class="glyphicon glyphicon-home"></i>
+                                            </a>
+                                            <a href="categoria.html" class="btn btn-default">Categorie</a>
+                                            <a href="categoria.html" class="btn btn-default">Software</a>
+                                        </div>
+                                    </div>
+                                    <!-- Select -->
+                                    <div class="col-xs-12 col-sm-6 xs-mt-10">
+                                        <select class="form-control">
+                                            <option selected>Più recenti</option>
+                                            <option>Più popolari</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Articles printed by javascript here -->
+                    </div>
+                    <!-- Right articles -->
+                    <div class="col-md-3 col-sm-3 hidden-xs col-no-padding mt-15" id="right-content">
+                        <script>
+                            function generateRelatedArticleHtml(stringTitle) {
+                                return `
+                                    <div class="row article debug-layout">
+                                        <div class="col-xs-12">
+                                            <article>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a href="#">
+                                                            <a href="#">
+                                                                <h4>${stringTitle.title}</h4>
+                                                            </a>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <img class="img-responsive" src="${stringTitle.srcSm}" width="100%">
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                `;
+                            }
+
+                            $(document).ready(function () {
+
+                                for (var i = titles.length; i > 0; i--)
+                                    $("#right-articles-container").html($("#right-articles-container").html() + generateRelatedArticleHtml(titles[i - 1]));
+                            });
+                        </script>
+                        <div id="right-articles-container">
+                            <!-- Articles printed by javascript here -->
+                        </div>
+                        <!-- Tag cloud -->
+                        <div id="tag-cloud" class="debug-layout"></div>
+                        <!-- <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/> -->
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-10" style="margin-top: 10px;">
-            <div class="col-xs-12">
-                <div class="btn-group btn-breadcrumb">
-                    <a href="index.html" class="btn btn-default">
-                        <i class="glyphicon glyphicon-home"></i>
-                    </a>
-                    <a href="login.html" class="btn btn-default">Login</a>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-10" style="margin-top: 10px;">
-
-            <!-- Content here -->
-
-            <div class="col-md-6">
-                <!--Form login-->
-                <div class="debug-layout padding-10">
-                    <form>
-                        <div class="form-group">
-                            <label>Accedi con le tue credenziali</label>
-                            <br>
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                        </div>
-                        <br>
-                        <button type="submit" class="btn btn-primary">Log-in</button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-6 padding-10">
-                <!--Form registrazione-->
-                <div class="debug-layout padding-10">
-                    <form>
-                        <div class="form-group">
-                            <label>Oppure registrati</label>
-                            <br>
-                            <label>Username</label>
-                            <input type="text" class="form-control" id="exampleInputUsername1" aria-describedby="emailHelp" placeholder="Username" required>
-
-                            <label>Nome</label>
-                            <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Nome" required>
-                            <label>Cognome</label>
-                            <input type="text" class="form-control" id="exampleInputSurname1" aria-describedby="emailHelp" placeholder="Cognome" required>
-
-                            <label>Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email" required>
-
-                            <label>Provincia</label>
-                            <input type="text" class="form-control" id="exampleInputProvincia1" aria-describedby="emailHelp" placeholder="Provincia"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="new_password" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Ripeti Password</label>
-                            <input type="password" class="form-control" id="confirm_password" placeholder="Password" required>
-                        </div>
-                        <br>
-                        <button type="submit" class="btn btn-primary">Registrati</button>
-                    </form>
-                </div>
-            </div>
-
-            <!--Script to make the password match before register-->
-            <script> 
-                var password = document.getElementById("new_password")
-                var confirm_password = document.getElementById("confirm_password");
-
-                function validatePassword() {
-                    if (password.value != confirm_password.value) {
-                        confirm_password.setCustomValidity("Passwords Don't Match");
-                    } else {
-                        confirm_password.setCustomValidity('');
-                    }
-                }
-
-                password.onchange = validatePassword;
-                confirm_password.onkeyup = validatePassword;
-            </script>
-
-        </div>
-
     </div>
     <button id="backToTop" class="btn btn-sm">
         <i class="fa fa-arrow-up"></i>
