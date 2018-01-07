@@ -1,66 +1,84 @@
-body{
+body {
     background-color: #E0E0E0;
 }
 
-.debug-layout{
+.debug-layout {
     /* border: 1px solid black; */
     background: #FAFAFA;
-    -webkit-box-shadow: 11px 10px 25px -10px rgba(0,0,0,0.50);
-    -moz-box-shadow: 11px 10px 25px -10px rgba(0,0,0,0.50);
-    box-shadow: 11px 10px 25px -10px rgba(0,0,0,0.50);
+    -webkit-box-shadow: 11px 10px 25px -10px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 11px 10px 25px -10px rgba(0, 0, 0, 0.50);
+    box-shadow: 11px 10px 25px -10px rgba(0, 0, 0, 0.50);
 }
 
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
     /* display: none;  */
 }
 
-.container.main{
+.container.main {
     height: 100%;
     position: relative;
 }
 
+
 /* Removes the padding from bootstrap columns */
-.col-no-left-padding{
+
+.col-no-left-padding {
     padding-left: 0px;
-    padding-right: 0px; 
-}
-.col-no-padding{
-    padding-left: 0px;
-    padding-right: 0px; 
+    padding-right: 0px;
 }
 
-.col-no-right-padding{
-    padding-left: 15px;
-    padding-right: 0px; 
-}
-.col-no-left-padding{
+.col-no-padding {
     padding-left: 0px;
-    padding-right: 15px; 
+    padding-right: 0px;
 }
+
+.col-no-right-padding {
+    padding-left: 15px;
+    padding-right: 0px;
+}
+
+.col-no-left-padding {
+    padding-left: 0px;
+    padding-right: 15px;
+}
+
 
 /* Removes the right padding from bootstrap columns */
-#right-articles-container{
+
+#right-articles-container {
     padding-right: 15px;
     position: relative;
-    height: calc(100vh - 342px - 15px - 20px - 30px); /* 100vh - tag cloud height*/
+    height: calc(100vh - 342px - 15px - 20px - 30px);
+    /* 100vh - tag cloud height*/
 }
 
+
 /* Utility class */
-.mt-15{
+
+.mt-15 {
     margin-top: 15px;
 }
-.padding-10{
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.padding-10 {
     padding: 10px;
 }
 
+
 /* Defualt main container height is 100 of vertical viewport and has auto vertical overflow */
-.main.container{
+
+.main.container {
     height: 100vh;
     overflow-y: auto;
 }
 
+
 /* Articles */
-.row.article{
+
+.row.article {
     margin-bottom: 15px;
 }
 
@@ -71,24 +89,28 @@ body{
     position: relative;
 }
 
+
 /* Footer*/
-footer{
+
+footer {
     width: 100%;
     height: 30px;
     position: fixed;
     bottom: 0px;
-    right:0;
+    right: 0;
     left: 0px;
-    -webkit-box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.50) !important;
-    -moz-box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.50) !important;
-    box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.50) !important;
+    -webkit-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.50) !important;
+    -moz-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.50) !important;
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.50) !important;
 }
-footer .row  div * {
+
+footer .row div * {
     height: 30px;
     line-height: 30px;
 }
+
 @media (min-width: 992px) {
-    footer{
+    footer {
         left: 200px;
         width: calc(100% - 200px);
     }
@@ -96,28 +118,29 @@ footer .row  div * {
 
 @media (max-width: 768px) {
     /* When mobile main container height is => 100vh - header height - footer height */
-    .container.main{
+    .container.main {
         height: calc(100vh - 50px - 30px) !important;
     }
-
     #articles-container,
-    #right-content{
+    #right-content {
         /* When mobile articles container height is => 100vh - header height - footer height - horizontal navbar height and padding */
         height: calc(100vh - 50px - 30px - 80px);
     }
+    .xs-mt-10 {
+        margin-top: 10px;
+    }
 }
-
 
 @media (min-width: 992px) {
     /* Set the scrollbar for right and left articles container */
     #articles-container,
-    #right-content{
+    #right-content {
         /* height: calc(100vh - 42px - 15px - 20px - 30px); */
         height: calc(100vh - 50px - 30px - 28px);
     }
-
-    #right-articles-container{
-        height: calc(100vh - 342px - 15px - 20px - 30px); /* 100vh - tag cloud height*/
+    #right-articles-container {
+        height: calc(100vh - 342px - 15px - 20px - 30px);
+        /* 100vh - tag cloud height*/
         overflow-y: auto;
         position: relative;
     }
@@ -125,91 +148,99 @@ footer .row  div * {
 
 
 /* Tag clud */
-#tag-cloud{
+
+#tag-cloud {
     height: 270px;
     width: calc(100% - 15px);
     position: absolute;
     margin-top: 15px;
 }
 
+
 /* Horizontal navbar */
-.navbar{
+
+.navbar {
     margin-bottom: 0px;
     overflow-y: auto;
 }
 
 
 /* Back to top button*/
-#backToTop{
+
+#backToTop {
     position: fixed;
     bottom: 50px;
     right: 15px;
     border-radius: 100%;
     color: white;
-    background:rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
-article img{
+article img {
     padding: 10px;
 }
 
-a,a:hover{
+a,
+a:hover {
     text-decoration: none;
 }
-a{
+
+a {
     color: #333;
 }
 
 
 /* Implementare video da youtube */
-.youtube-container { 
-    display: block; 
-    margin: 20px auto; 
-    width: 100%; 
-    max-width: 600px; 
+
+.youtube-container {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
 }
 
-.youtube-player { 
-    display: block; 
-    width: 100%; /* assuming that the video has a 16:9 ratio */ 
-    padding-bottom: 56.25%; 
-    overflow: hidden; 
-    position: relative; 
-    width: 100%; 
-    height: 100%; 
-    cursor: hand; 
-    cursor: pointer; 
-    display: block; 
+.youtube-player {
+    display: block;
+    width: 100%;
+    /* assuming that the video has a 16:9 ratio */
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: hand;
+    cursor: pointer;
+    display: block;
 }
 
-img.youtube-thumb { 
-    bottom: 0; 
-    display: block; 
-    left: 0; 
-    margin: auto; 
-    max-width: 100%; 
-    width: 100%; 
-    position: absolute; 
-    right: 0; 
-    top: 0; 
-    height: auto 
+img.youtube-thumb {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: auto
 }
 
-div.play-button { 
-    height: 72px; 
-    width: 72px; 
-    left: 50%; 
-    top: 50%; 
-    margin-left: -36px; 
-    margin-top: -36px; 
-    position: absolute; 
-    background: url("http://i.imgur.com/TxzC70f.png") no-repeat; 
+div.play-button {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    background: url("http://i.imgur.com/TxzC70f.png") no-repeat;
 }
 
-#youtube-iframe { 
-    width: 100%; 
-    height: 100%; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
+#youtube-iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
