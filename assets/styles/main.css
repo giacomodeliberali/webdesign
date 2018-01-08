@@ -48,7 +48,7 @@ body {
 #right-articles-container {
     padding-right: 15px;
     position: relative;
-    height: calc(100vh - 342px - 15px - 20px - 30px);
+    /*height: calc(100vh - 342px - 15px - 20px - 30px);*/
     /* 100vh - tag cloud height*/
 }
 
@@ -82,8 +82,12 @@ body {
     margin-bottom: 15px;
 }
 
-#articles-container,
 #right-content {
+    height: calc(100vh - 42px - 15px - 55px);
+    /*overflow-y: auto;*/
+    position: relative;
+}
+#articles-container {
     height: calc(100vh - 42px - 15px - 55px);
     overflow-y: auto;
     position: relative;
@@ -124,7 +128,7 @@ footer .row div * {
     #articles-container,
     #right-content {
         /* When mobile articles container height is => 100vh - header height - footer height - horizontal navbar height and padding */
-        height: calc(100vh - 50px - 30px - 80px);
+        height: auto;
     }
     .xs-mt-10 {
         margin-top: 10px;

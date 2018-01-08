@@ -54,10 +54,11 @@ $(document).ready(function () {
     });
 
     // Initialize perfect scrollbars
+    
     navbarScrollbar = new PerfectScrollbar('nav.navbar');
     articlesContainerScrollbar = new PerfectScrollbar('#articles-container');
     rightArticlesContainerScrollbar = new PerfectScrollbar('#right-articles-container');
-
+    
     updateScrollbars();
 });
 
