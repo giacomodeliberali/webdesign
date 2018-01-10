@@ -26,6 +26,8 @@
     <script src="./assets/vendor/perfect-scrollbar.min.js"></script>
     <script src="./assets/vendor/jqcloud.min.js"></script>
 
+    
+    
     <title>Web design</title>
 </head>
 
@@ -445,8 +447,33 @@
                               </a>
                         </div>
                         </div>
-                        <!-- Tag cloud -->
-                        <div>Qua ci vanno i tag</div>
+                        <!-- Modifica tag -->
+                        <div>
+                            <div class="row" id="tag_container">
+                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                                <!-- New tag are added here-->
+                            </div>
+                            <div class="row">
+                                <form>
+                                    <input id="newtag" type="text" placeholder="Inserisci tag">
+                                    <p id="inserisci">Inserisci</p>
+                                    
+                                    <script>
+                                        $("#inserisci").on("click",function(){
+                                            var content = $("#newtag").val();
+                                            if(content!=""){    
+                                                var toAdd = '<button>'+content +'<span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>';
+                                                $("#tag_container").html($("#tag_container").html() + toAdd);
+                                            }
+                                        })
+                                    </script>
+                                    
+                                </form>
+                            </div>
+                        </div>
                         <!-- <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/> -->
                     </div>
                 </div>
@@ -474,6 +501,8 @@
             </div>
         </div>
     </footer>
+    
+    
 </body>
 
 </html>
