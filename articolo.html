@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/styles/sidebar.css">
     <link rel="stylesheet" href="./assets/styles/searchbar.css">
     <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="stylesheet" href="./assets/styles/articolo.css">
     <link rel="stylesheet" href="./assets/vendor/jqcloud.min.css">
 
 
@@ -348,7 +349,7 @@
                                                     </figure>
                                                 </div>
                                                 <div class="col-sm-6 col-md-8">
-                                                    <a href="articolo.html">
+                                                    <a href="#">
                                                         <h4>${objectTitle.title}</h4>
                                                     </a>
                                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
@@ -361,22 +362,37 @@
                             `;
                         }
 
-                        $(document).ready(function () {
+                        /*$(document).ready(function () {
 
                             for (var i = 0; i < 20; i++)
                                 $("#articles-container").html($("#articles-container").html() +
                                     generateMainArticleHtml(titles[Math.floor(Math.random() * (titles.length))]));
-                        });
+                        });*/
                     </script>
                     <!-- Main articles -->
                     <div class="col-xs-12 col-sm-9 col-md-9 col-no-left-padding mt-15" id="articles-container">
                         <!-- Articles printed by javascript here -->
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="btn-group btn-breadcrumb">
+                                    <a href="index.html" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-home"></i>
+                                    </a>
+                                    <a href="categoria.html" class="btn btn-default">Categoria</a>
+                                    <a href="#" class="btn btn-default">Titolo articolo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h1>Titolo dell'articolo</h1>
+                        <h3>Sottotitolo</h3>
+                        
+                        <img id="immagineArticolo" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Moaisvxd.jpg" alt="Immagine articolo" >
+                        <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
+                        
                         <!-- Footer printed by javascript here -->
                     </div>
                     <!-- Right articles -->
                     <div class="col-sm-3 col-xs-12 col-no-padding mt-15" id="right-content">
-                        <!--<div id="tag-cloud" class="debug-layout"></div> -->
-                        <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/>
                         <div id="right-articles-container">
                             <!-- Articles printed by javascript here -->
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -420,7 +436,8 @@
                         </div>
                         </div>
                         <!-- Tag cloud -->
-                        
+                        <div id="tag-cloud" class="debug-layout"></div>
+                        <!-- <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/> -->
                     </div>
                 </div>
             </div>

@@ -143,8 +143,8 @@ footer .row div * {
         height: calc(100vh - 50px - 30px - 28px);
     }
     #right-articles-container {
-        height: calc(100vh - 342px - 15px - 20px - 30px);
-        /* 100vh - tag cloud height*/
+        /*height: calc(100vh - 342px - 15px - 20px - 30px);
+         100vh - tag cloud height*/
         overflow-y: auto;
         position: relative;
     }
