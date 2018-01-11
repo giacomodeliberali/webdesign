@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/styles/sidebar.css">
     <link rel="stylesheet" href="./assets/styles/searchbar.css">
     <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="stylesheet" href="./assets/styles/evento.css">
     <link rel="stylesheet" href="./assets/vendor/jqcloud.min.css">
 
 
@@ -387,11 +388,11 @@
                         <h1>Titolo dell'evento</h1>
                         <h3>Data e ora</h3>
                         <div class="container-fluid" align="center">
-                            <img src="http://raffaelesalvati.it/wp-content/uploads/2015/10/ginnasta-muscoloso-torso-contorno-consulenza-seo-bologna-ferrara-cento-creazione-siti-web-creazione-loghi-immagine-coordinata-raffaele-de-sandro-salvati.jpg">
+                            <img  src="http://raffaelesalvati.it/wp-content/uploads/2015/10/ginnasta-muscoloso-torso-contorno-consulenza-seo-bologna-ferrara-cento-creazione-siti-web-creazione-loghi-immagine-coordinata-raffaele-de-sandro-salvati.jpg">
                             <img src="http://raffaelesalvati.it/wp-content/uploads/2015/10/ginnasta-muscoloso-torso-contorno-consulenza-seo-bologna-ferrara-cento-creazione-siti-web-creazione-loghi-immagine-coordinata-raffaele-de-sandro-salvati.jpg">
                             <img src="http://raffaelesalvati.it/wp-content/uploads/2015/10/ginnasta-muscoloso-torso-contorno-consulenza-seo-bologna-ferrara-cento-creazione-siti-web-creazione-loghi-immagine-coordinata-raffaele-de-sandro-salvati.jpg">
                         </div>
-                        <img id="immagineArticolo" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Moaisvxd.jpg" alt="Immagine articolo" style="width: 100%">
+                        <img class="bordered"  id="immagineArticolo" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Moaisvxd.jpg" alt="Immagine articolo" style="width: 100%">
                         
                         <div class="col-sm-6">
                             <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
@@ -447,8 +448,10 @@
                               </a>
                         </div>
                         </div>
+                        <br>
                         <!-- Modifica tag -->
-                        <div>
+                        <div class="bordered">
+                            <h3>Pannello di inserimento Tag</h3>
                             <div class="row" id="tag_container">
                                 <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
                                 <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
@@ -457,9 +460,8 @@
                                 <!-- New tag are added here-->
                             </div>
                             <div class="row">
-                                <form>
                                     <input id="newtag" type="text" placeholder="Inserisci tag">
-                                    <p id="inserisci">Inserisci</p>
+                                    <button type="button" id="inserisci">Inserisci</button>
                                     
                                     <script>
                                         $("#inserisci").on("click",function(){
@@ -467,12 +469,12 @@
                                             if(content!=""){    
                                                 var toAdd = '<button>'+content +'<span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>';
                                                 $("#tag_container").html($("#tag_container").html() + toAdd);
+                                                $("#newtag").val("");
                                             }
                                         })
                                     </script>
-                                    
-                                </form>
                             </div>
+                            <br>
                         </div>
                         <!-- <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/> -->
                     </div>
