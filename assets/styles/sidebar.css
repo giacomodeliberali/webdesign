@@ -57,6 +57,7 @@ nav.sidebar, .main{
     nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
         text-align: center;
         width: 100%;
+        height: 100px;
         margin-left: 0px;
     }
 
