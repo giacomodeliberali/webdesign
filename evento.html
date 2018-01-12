@@ -269,6 +269,7 @@
                         <!-- Articles printed by javascript here -->
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
+                                <!-- Path -->
                                 <div class="btn-group btn-breadcrumb">
                                     <a href="index.html" class="btn btn-default">
                                         <i class="glyphicon glyphicon-home"></i>
@@ -343,13 +344,26 @@
                         </div>
                         <br>
                         <!-- Modifica tag -->
-                        <div class="bordered">
-                            <h3>Pannello di inserimento Tag</h3>
+                        <div class="bordered text-center">
+                            <h3>Pannello di gestione Tag</h3>
                             <div class="row" id="tag_container">
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                                <div class="btn-group btn-breadcrumb">
+                                    <a href="#" class=" btn btn-default">Tag1</a>
+                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                </div>
+                                <div class="btn-group btn-breadcrumb">
+                                    <a href="#" class=" btn btn-default">Tag2</a>
+                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                </div>
+                                <div class="btn-group btn-breadcrumb">
+                                    <a href="#" class=" btn btn-default">Tag3</a>
+                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                </div>
+                                <div class="btn-group btn-breadcrumb">
+                                    <a href="#" class=" btn btn-default">Tag4</a>
+                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                </div>
+                                
                                 <!-- New tag are added here-->
                             </div>
                             <div class="row">
@@ -359,11 +373,15 @@
                                     <script>
                                         $("#inserisci").on("click",function(){
                                             var content = $("#newtag").val();
-                                            if(content!=""){    
-                                                var toAdd = '<button>'+content +'<span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>';
-                                                $("#tag_container").html($("#tag_container").html() + toAdd);
-                                                $("#newtag").val("");
+                                            if(content.length>20){
+                                                alert("Impossibile inserire tag così lungo");
+                                                content="";
                                             }
+                                            if(content!=""){    
+                                                var toAdd = '<div class="btn-group btn-breadcrumb"><a href="#" class=" btn btn-default">'+content+'</a><a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a></div>';
+                                                $("#tag_container").html($("#tag_container").html() + toAdd); 
+                                            }
+                                            $("#newtag").val("");
                                         })
                                     </script>
                             </div>
