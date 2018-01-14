@@ -26,7 +26,46 @@
     <script src="./assets/vendor/perfect-scrollbar.min.js"></script>
     <script src="./assets/vendor/jqcloud.min.js"></script>
     <script src="./assets/scripts/load_articles.js"></script>
+    <script> function parseGetVars()
+            {
+                // creo una array
+              var args = new Array();
+              // individuo la query (cioè tutto quello che sta a destra del ?)
+              // per farlo uso il metodo substring della proprietà search
+              // dell'oggetto location
+              var query = window.location.search.substring(1);
+              // se c'è una querystring procedo alla sua analisi
+              if (query)
+              {
+                // divido la querystring in blocchi sulla base del carattere &
+                // (il carattere & è usato per concatenare i diversi parametri della URL)
+                var strList = query.split('&');
+                // faccio un ciclo per leggere i blocchi individuati nella querystring
+                for(str in strList)
+                {
+                  // divido ogni blocco mediante il simbolo uguale
+                  // (uguale è usato per l'assegnazione del valore)
+                  var parts = strList[str].split('=');
+                  // inserisco nella array args l'accoppiata nome = valore di ciascun
+                  // parametro presente nella querystring
+                  args[unescape(parts[0])] = unescape(parts[1]);
+                }
+              }
 
+              return args;
+            }
+            var arguments = parseGetVars();
+            
+            $(document).ready(function(){
+                                var arguments = parseGetVars();
+                                $("#barra_ricerca").val(arguments["search"]);
+                                $("#label-risultati").html("Risultati ricerca '"+arguments["search"]+"'");
+                              }
+            );
+        
+    
+    </script>
+    
     <title>MINI 4WD- Ricerca</title>
 </head>
 
@@ -267,8 +306,9 @@
 
                     <!-- Main articles -->
                     <div class="col-xs-12 col-sm-9 col-md-9 col-no-left-padding mt-15" id="articles-container">
+                        <!-- Form ricerca -->
                         <div class="row col-xs-12 col-sm-12 debug-layout">
-                            <input type="text" placeholder="Ricerca" width="100%">
+                            <input id="barra_ricerca" type="text" placeholder="Ricerca" width="100%">
                             <button type="button" value="Ricerca">Ricerca</button>
                             
                             <div class="radio">
@@ -281,6 +321,10 @@
                               <label><input type="radio" name="optradio">Blog</label>
                             </div>
 
+                        </div>
+                        
+                        <div class="row">
+                            <h3 id="label-risultati">Risultati Ricerca</h3>
                         </div>
                         <!-- Articles printed by javascript here -->
                         <!-- Footer printed by javascript here -->
