@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./assets/styles/sidebar.css">
     <link rel="stylesheet" href="./assets/styles/searchbar.css">
     <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="stylesheet" href="./assets/styles/articolo.css">
+    
     <link rel="stylesheet" href="./assets/vendor/jqcloud.min.css">
 
 
@@ -26,7 +28,7 @@
     <script src="./assets/vendor/perfect-scrollbar.min.js"></script>
     <script src="./assets/vendor/jqcloud.min.js"></script>
 
-    <title>Web design - Software</title>
+    <title>Web design</title>
 </head>
 
 <body>
@@ -49,7 +51,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li class="active">
                         <a href="index.html">News
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
                                 <i class="fa fa-home"></i>
@@ -64,7 +66,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Eventi
+                        <a href="lista_eventi.html">Eventi
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
                                 <i class="fa fa-calendar"></i>
                             </span>
@@ -77,7 +79,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="categoria.html">Software
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
                                 <i class="fa fa-heart"></i>
@@ -234,153 +236,130 @@
             <div class="col-xs-12 col-no-padding">
                 <!-- Horizontal navbar -->
                 <div class="row debug-layout">
-                    <div class="col-sm-1 hidden-xs hidden-md hidden-lg" style="height: 52px">
-                        <button class="btn btn-float btn-sm pull-left" id="sidebarOpener">
-                            <i class="fa fa-bars" aria-hidden="true"></i>
-                        </button>
+                        <div class="col-sm-1 hidden-xs hidden-md hidden-lg" style="height: 52px">
+                            <button class="btn btn-float btn-sm pull-left" id="sidebarOpener">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="col-xs-4" style="height: 52px">
+                            <h4 style="line-height: 35px">News</h4>
+                        </div>
+                        <div class="col-md-7 col-sm-6 col-xs-7 padding-10">
+                                <!-- Search box -->
+                                <form action="" class="search-form" style="max-width: 100%">
+                                    <div class="form-group has-feedback">
+                                        <label for="search" class="sr-only">Search</label>
+                                        <input type="text" class="form-control" name="search" id="search" placeholder="Cerca...">
+                                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                    </div>
+                                </form>
+                        </div>
+                        <div class="col-sm-1 col-xs-1 text-center padding-10" id="userbox">
+                            <!-- User box -->
+                            <a href="login.html">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-xs-4" style="height: 52px">
-                        <h4 style="line-height: 35px">Software</h4>
-                    </div>
-                    <div class="col-md-7 col-sm-6 col-xs-7 padding-10">
-                        <!-- Search box -->
-                        <form action="" class="search-form" style="max-width: 100%">
-                            <div class="form-group has-feedback">
-                                <label for="search" class="sr-only">Search</label>
-                                <input type="text" class="form-control" name="search" id="search" placeholder="Cerca...">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-sm-1 col-xs-1 text-center padding-10" id="userbox">
-                        <!-- User box -->
-                        <a href="login.html">
-                            <span class="glyphicon glyphicon-user"></span>
-                        </a>
-                    </div>
-                </div>
                 <!-- Content here -->
                 <div class="row">
-                    <script>
-                        var titles = new Array();
-
-                        titles.push({
-                            title: "Migliorie all'algoritmo di Dijkstra",
-                            scrLg: "http://www.matthew-scott.com/prj/javanoginn/graph2.gif",
-                            srcSm: "https://lh3.googleusercontent.com/UIRYYyODh86K2tpvtNPxw1w_fll5vXHZnso0j1Llki_iH8p3JVdZ1ZEyl04T5Xen4pAZZUv1SUQ=w50-h50-e365"
-                        });
-
-                        titles.push({
-                            title: "Go: il linguaggio Google più smart",
-                            scrLg: "https://media.licdn.com/mpr/mpr/shrink_200_100/AAEAAQAAAAAAAAidAAAAJDRlZDVhZGI0LTg5OTktNGZiYS05ZTVhLTA5OWQ4YmJmNDViZg.png",
-                            srcSm: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Googlelogoi.png/50px-Googlelogoi.png"
-                        });
-
-                        titles.push({
-                            title: "Nuovi benchmark sui browser",
-                            scrLg: "http://www.erpreports.com/dart4/images/dart_browsers.jpg",
-                            srcSm: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Firefox_Logo%2C_2017.svg/50px-Firefox_Logo%2C_2017.svg.png"
-                        });
-
-
-
-                        function generateMainArticleHtml(objectTitle) {
-                            return `
-                                <div class="row article debug-layout">
-                                    <div class="col-xs-12">
-                                        <article>
-                                            <div class="row">
-                                                <div class="col-sm-6 col-md-4">
-                                                    <figure>
-                                                        <img class="img-responsive" src="${objectTitle.scrLg}" width="100%">
-                                                    </figure>
-                                                </div>
-                                                <div class="col-sm-6 col-md-8">
-                                                    <a href="articolo.html">
-                                                        <h4>${objectTitle.title}</h4>
-                                                    </a>
-                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div>
-                            `;
-                        }
-
-                        $(document).ready(function () {
-
-                            for (var i = 0; i < titles.length; i++)
-                                $("#articles-container").html($("#articles-container").html() +
-                                    generateMainArticleHtml(titles[i]));
-                        });
-                    </script>
+                    
                     <!-- Main articles -->
                     <div class="col-xs-12 col-sm-9 col-md-9 col-no-left-padding mt-15" id="articles-container">
-                        <div class="row article debug-layout">
-                            <div class="col-xs-12 padding-10">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-6">
-                                        <div class="btn-group btn-breadcrumb">
-                                            <a href="index.html" class="btn btn-default">
-                                                <i class="glyphicon glyphicon-home"></i>
-                                            </a>
-                                            <a href="categoria.html" class="btn btn-default">Categorie</a>
-                                            <a href="categoria.html" class="btn btn-default">Software</a>
-                                        </div>
-                                    </div>
-                                    <!-- Select -->
-                                    <div class="col-xs-12 col-sm-6 xs-mt-10">
-                                        <select class="form-control">
-                                            <option selected>Più recenti</option>
-                                            <option>Più popolari</option>
-                                        </select>
-                                    </div>
+                        <!-- Articles printed by javascript here -->
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="btn-group btn-breadcrumb">
+                                    <a href="index.html" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-home"></i>
+                                    </a>
+                                    <a href="categoria.html" class="btn btn-default">Categoria</a>
+                                    <a href="#" class="btn btn-default">Titolo articolo</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Articles printed by javascript here -->
+                        <h1>Titolo dell'articolo</h1>
+                        <h3>Sottotitolo</h3>
+                        
+                        <img id="immagineArticolo" src="https://conteudo.imguol.com.br/blogs/160/files/2017/06/isis-valverde-joao-miguel-jr.jpg" alt="Immagine articolo" >
+                        <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
+                        
+                        <!-- Footer printed by javascript here -->
                     </div>
                     <!-- Right articles -->
-                    <div class="col-md-3 col-sm-3 hidden-xs col-no-padding mt-15" id="right-content">
-                        <script>
-                            function generateRelatedArticleHtml(stringTitle) {
-                                return `
-                                    <div class="row article debug-layout">
-                                        <div class="col-xs-12">
-                                            <article>
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        <a href="#">
-                                                            <a href="#">
-                                                                <h4>${stringTitle.title}</h4>
-                                                            </a>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        <img class="img-responsive" src="${stringTitle.srcSm}" width="100%">
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                `;
-                            }
-
-                            $(document).ready(function () {
-
-                                for (var i = titles.length; i > 0; i--)
-                                    $("#right-articles-container").html($("#right-articles-container").html() + generateRelatedArticleHtml(titles[i - 1]));
-                            });
-                        </script>
+                    <div class="col-sm-3 col-xs-12 col-no-padding mt-15" id="right-content">
                         <div id="right-articles-container">
                             <!-- Articles printed by javascript here -->
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                              <!-- Indicators -->
+                              <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                              </ol>
+
+                              <!-- Wrapper for slides -->
+                              <div class="carousel-inner">
+                                <div class="item active">
+                                  <img src="https://avatars2.githubusercontent.com/u/1294177?s=200&v=4" alt="Immagine raspberry PI" width="100%">
+                                    <div class="carousel-caption">
+                                        <a href="articolo.html"><h3>Titolo 1</h3></a>
+                                    </div>    
+                                </div>
+
+                                <div class="item">
+                                  <img src="https://it.rs-online.com/euro/img/global/brand/arduino/arduino-electric-2.jpg" alt="Immagine arduino uno" width="100%">
+                                    <div class="carousel-caption">
+                                        <a href="articolo.html"><h3 >Titolo 2</h3></a>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                  <img src="http://www.itcolorado.com/wp-content/uploads/2017/05/it-colorado-logo.png" alt="Logo IT Colorado" width="100%">
+                                    <div class="carousel-caption">
+                                        <a href="articolo.html"><h3 >Titolo 3</h3></a>
+                                    </div>
+                                </div>
+                              </div>
+
+                              <!-- Left and right controls -->
+                              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
                         </div>
-                        <!-- Tag cloud -->
-                        <div id="tag-cloud" class="debug-layout"></div>
+                        </div>
+                        <!-- Tag modificabili -->
+                        <div class="bordered">
+                            <h3>Pannello di inserimento Tag</h3>
+                            <div class="row" id="tag_container">
+                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                                <!-- New tag are added here-->
+                            </div>
+                            <div class="row">
+                                    <input id="newtag" type="text" placeholder="Inserisci tag">
+                                    <button type="button" id="inserisci">Inserisci</button>
+                                    
+                                    <script>
+                                        $("#inserisci").on("click",function(){
+                                            var content = $("#newtag").val();
+                                            if(content!=""){    
+                                                var toAdd = '<button>'+content +'<span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>';
+                                                $("#tag_container").html($("#tag_container").html() + toAdd);
+                                                $("#newtag").val("");
+                                            }
+                                        })
+                                    </script>
+                            </div>
+                            <br>
+                        </div>
                         <!-- <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/> -->
                     </div>
                 </div>

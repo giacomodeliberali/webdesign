@@ -59,7 +59,6 @@
             $(document).ready(function(){
                                 var arguments = parseGetVars();
                                 $("#barra_ricerca").val(arguments["search"]);
-                                $("#label-risultati").html("Risultati ricerca '"+arguments["search"]+"'");
                               }
             );
         
@@ -322,9 +321,18 @@
                             </div>
 
                         </div>
-                        
                         <div class="row">
-                            <h3 id="label-risultati">Risultati Ricerca</h3>
+                            <form method="get" action="ricerca.html">
+                                <input type="hidden" value="tag" name="type">
+                                <button type="submit" value="Tag1" name="search">Tag1</button>
+                                <button type="submit" value="Tag2" name="search">Tag2</button>
+                                <button type="submit" value="Tag3" name="search">Tag3</button>
+                                <button type="submit" value="Tag4" name="search">Tag4</button>
+                            </form>
+                                
+                        </div>
+                        <div class="row">
+                            <h3 id="label-risultati">Risultati Ricerca :</h3>
                         </div>
                         <!-- Articles printed by javascript here -->
                         <!-- Footer printed by javascript here -->
