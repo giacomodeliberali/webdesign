@@ -2,7 +2,7 @@ var blogger = new Array();
 blogger.push({
     name: "Salvatore Aranzulla",
     rate: 7,
-    specialità: "Hardware"
+    specialità: "Hardware",
     foto:"#"
 });
 
