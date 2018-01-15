@@ -264,3 +264,9 @@ div.play-button {
   -moz-border-radius: 10px; /* firefox */
   -webkit-border-radius: 10px; /* safari, chrome */
 }
+
+.border-radius-soft { 
+  border-radius: 5px; 
+  -moz-border-radius: 5px; /* firefox */
+  -webkit-border-radius: 5px; /* safari, chrome */
+}
