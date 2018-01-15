@@ -69,10 +69,10 @@ titles.push({
 
 function generateMainArticleHtml(objectTitle) {
     return `
-        <div class="row article debug-layout">
+        <div class="row article debug-layout border-radius">
             <div class="col-xs-12">
                 <article >
-                    <img src="${objectTitle.scrLg}" width="100%" class="img-responsive rounded">
+                    <img src="${objectTitle.scrLg}" width="100%" class="img-responsive"  >
                     
                     <span class="text-center"><a href="articolo.html"><h2>${objectTitle.title}</h2></a></span>
                     
