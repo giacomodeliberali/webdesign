@@ -265,20 +265,22 @@
                         var titles = new Array();
 
                         titles.push({
-                            title: "Migliorie all'algoritmo di Dijkstra",
-                            scrLg: "http://www.matthew-scott.com/prj/javanoginn/graph2.gif",
+                            title: "Biennale VR",
+                            addr:"Italia,Venezia, Lido Eccelsior",
+                            scrLg: "https://i.ytimg.com/vi/R_QjbVMZ9Xc/maxresdefault.jpg",
                             srcSm: "https://lh3.googleusercontent.com/UIRYYyODh86K2tpvtNPxw1w_fll5vXHZnso0j1Llki_iH8p3JVdZ1ZEyl04T5Xen4pAZZUv1SUQ=w50-h50-e365"
                         });
 
                         titles.push({
-                            title: "Go: il linguaggio Google più smart",
-                            scrLg: "https://media.licdn.com/mpr/mpr/shrink_200_100/AAEAAQAAAAAAAAidAAAAJDRlZDVhZGI0LTg5OTktNGZiYS05ZTVhLTA5OWQ4YmJmNDViZg.png",
+                            title: "PyCon8",
+                            addr:"Italia,Firenze",
+                            scrLg: "https://images.idgesg.net/images/article/2017/08/python-100732474-orig.jpg",
                             srcSm: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Googlelogoi.png/50px-Googlelogoi.png"
                         });
 
                         titles.push({
-                            title: "Nuovi benchmark sui browser",
-                            scrLg: "http://www.erpreports.com/dart4/images/dart_browsers.jpg",
+                            title: "Computer & Gadgets Events",
+                            scrLg: "https://cdn.wccftech.com/wp-content/uploads/2016/08/event0_computer.jpg",
                             srcSm: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Firefox_Logo%2C_2017.svg/50px-Firefox_Logo%2C_2017.svg.png"
                         });
 
@@ -286,12 +288,12 @@
 
                         function generateMainArticleHtml(objectTitle) {
                             return `
-                                <div class="row article debug-layout">
+                                <div class="row article debug-layout border-radius">
                                     <div class="col-xs-12">
                                         <article>
                                             <div class="row">
                                                 <div class="col-sm-6 col-md-4">
-                                                    <img class="img-responsive" src="${objectTitle.scrLg}" style="width:100%">
+                                                    <img class="img-responsive border-radius" src="${objectTitle.scrLg}" style="width:100%">
                                                 </div>
 
                                                 <div class="col-sm-6 col-md-8">
@@ -307,7 +309,7 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-sm-12">
-                                                            <h4>Indirizzo evento</h4>
+                                                            <h4>${objectTitle.addr}</h4>
                                                         </div>
                                                     </div>
                                                     <div class="row">
