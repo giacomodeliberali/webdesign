@@ -1,6 +1,9 @@
 h1,h3 {
     text-align: center;
+    color: aliceblue;
 }
-#immagineArticolo{
+
+img#immagineArticolo{
     width:100%;
+    border-radius: 20px;
 }

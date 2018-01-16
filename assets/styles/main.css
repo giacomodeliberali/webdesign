@@ -270,3 +270,15 @@ div.play-button {
   -moz-border-radius: 5px; /* firefox */
   -webkit-border-radius: 5px; /* safari, chrome */
 }
+
+.top-margin{
+    margin: 10px 0px;
+}
+
+#blogger{
+    margin: 10px 0px;
+}
+
+#barra_ricerca{
+    width: 100%;
+}

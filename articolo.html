@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Blog
+                        <a href="blogger.html">Blog
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
                                 <i class="fa fa-pencil"></i>
                             </span>
@@ -281,7 +281,7 @@
                         <h1>Titolo dell'articolo</h1>
                         <h3>Sottotitolo</h3>
                         
-                        <img id="immagineArticolo" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Moaisvxd.jpg" alt="Immagine articolo" >
+                        <img id="immagineArticolo" src="https://cdn.shopify.com/s/files/1/0259/1735/files/iphone8_plus_matt_blue_skins_2048x2048.jpg?v=1506940098" alt="Immagine articolo" >
                         <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
                         
                         <!-- Footer printed by javascript here -->
@@ -333,14 +333,27 @@
                               </a>
                         </div>
                         </div>
-                        <!-- Tag modificabili -->
-                        <div class="bordered">
-                            <h3>Pannello di inserimento Tag</h3>
+                        <!-- Pannelloo gestione tag -->
+                        <div class="bordered text-center debug-layout border-radius">
+                            <h3>Pannello di gestione Tag</h3>
                             <div class="row" id="tag_container">
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                                <div class="btn-group btn-breadcrumb">
+                                    <a href="#" class=" btn btn-default">Tag1</a>
+                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                </div>
+                                <div class="btn-group btn-breadcrumb">
+                                    <a href="#" class=" btn btn-default">Tag2</a>
+                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                </div>
+                                <div class="btn-group btn-breadcrumb">
+                                    <a href="#" class=" btn btn-default">Tag3</a>
+                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                </div>
+                                <div class="btn-group btn-breadcrumb">
+                                    <a href="#" class=" btn btn-default">Tag4</a>
+                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                </div>
+                                
                                 <!-- New tag are added here-->
                             </div>
                             <div class="row">
@@ -350,17 +363,20 @@
                                     <script>
                                         $("#inserisci").on("click",function(){
                                             var content = $("#newtag").val();
-                                            if(content!=""){    
-                                                var toAdd = '<button>'+content +'<span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>';
-                                                $("#tag_container").html($("#tag_container").html() + toAdd);
-                                                $("#newtag").val("");
+                                            if(content.length>20){
+                                                alert("Impossibile inserire tag così lungo");
+                                                content="";
                                             }
+                                            if(content!=""){    
+                                                var toAdd = '<div class="btn-group btn-breadcrumb"><a href="#" class=" btn btn-default">'+content+'</a><a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a></div>';
+                                                $("#tag_container").html($("#tag_container").html() + toAdd); 
+                                            }
+                                            $("#newtag").val("");
                                         })
                                     </script>
                             </div>
                             <br>
                         </div>
-                        <!-- <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/> -->
                     </div>
                 </div>
             </div>
