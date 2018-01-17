@@ -5,7 +5,7 @@ blogger.push({
     nart: 1323,
     specialità: "Hardware",
     pres: "Salvatore Aranzulla è il fondatore del sito Aranzulla.it",
-    foto:"https://cdn3.iconfinder.com/data/icons/pixel-perfect-at-24px-volume-5/24/2049-512.png",
+    foto:"./assets/images/sa.jpeg",
     
 });
 
@@ -15,7 +15,7 @@ blogger.push({
     nart: 10,
     specialità: "Videogame",
     pres: "Ciccio Gamer è un boss",
-    foto:"https://cdn3.iconfinder.com/data/icons/pixel-perfect-at-24px-volume-5/24/2049-512.png",
+    foto:"./assets/images/cicciogamer.jpg",
     
 });
 
