@@ -3,7 +3,7 @@ blogger.push({
     name: "Salvatore Aranzulla",
     rate: 7,
     specialità: "Hardware",
-    foto:"https://cdn3.iconfinder.com/data/icons/pixel-perfect-at-24px-volume-5/24/2049-512.png" width="100%"
+    foto:"https://cdn3.iconfinder.com/data/icons/pixel-perfect-at-24px-volume-5/24/2049-512.png"
 });
 
 
@@ -12,7 +12,7 @@ function generateMainBloggerHtml(objectBlogger) {
     return `
             <div class="row debug-layout">
                 <div class="col-sm-4 hidden-xs">
-                    <img src="${objectBlogger.foto}">
+                    <img src="${objectBlogger.foto} width="100%">
                 </div> 
                 <div class="col-sm-8" height="100%">
                     <div class="row">
