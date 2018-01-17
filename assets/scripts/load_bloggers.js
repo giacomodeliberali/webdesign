@@ -3,33 +3,48 @@ blogger.push({
     name: "Salvatore Aranzulla",
     rate: 7,
     specialità: "Hardware",
-    foto:"#"
+    foto:"https://cdn3.iconfinder.com/data/icons/pixel-perfect-at-24px-volume-5/24/2049-512.png" width="100%"
 });
 
 
 
-function generateMainArticleHtml(objectTitle) {
+function generateMainBloggerHtml(objectBlogger) {
     return `
-        <div class="row article debug-layout">
-            <div class="col-xs-12">
-                <article>
+
+        <div class="col-xs-12 col-sm-9 col-md-9 col-no-left-padding mt-15" id="articles-container">
+            <div class="row debug-layout">
+                <div class="col-sm-4 hidden-xs">
+                    <img src="${objectBlogger.foto}">
+                </div> 
+                <div class="col-sm-8" height="100%">
                     <div class="row">
-                        <div class="col-sm-6 col-md-4">
-                            <figure>
-                                <img class="img-responsive" src="${objectTitle.scrLg}" width="100%">
-                            </figure>
-                        </div>
-                        <div class="col-sm-6 col-md-8">
-                            <a href="articolo.html">
-                                <h4>${objectTitle.title}</h4>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        </div>
-                    </div>
-                </article>
+                        <div class="col-xs-8 col-sm-8">
+                            <h3>${objectBlogger.name}</h3>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4">
+                                        #Follower
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-8 col-sm-8">
+                                        Numero articoli
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4">
+                                        Rate: ${objectBlogger.rate}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
+                                        Specialità: ${objectBlogger.specialità} 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
+                                        <b>Presentazione:</b>
+                                    </div>
+                </div>
             </div>
-        </div>
     `;
 }
 
@@ -37,5 +52,5 @@ $(document).ready(function () {
 
     for (var i = 0; i < 20; i++)
         $("#articles-container").html($("#articles-container").html() +
-            generateMainArticleHtml(titles[Math.floor(Math.random() * (titles.length))]));
+            generateMainArticleHtml(blogger[Math.floor(Math.random() * (blogger.length))]));
 });
