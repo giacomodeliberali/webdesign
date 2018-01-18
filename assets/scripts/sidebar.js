@@ -46,7 +46,7 @@ $(document).ready(function () {
     $(window).resize(function () {
         htmlbodyHeightUpdate();
         tabletSidebar();
-        //updateScrollbars();
+        updateScrollbars();
     });
     $(window).scroll(function () {
         height2 = $('.main').height()
@@ -55,11 +55,11 @@ $(document).ready(function () {
 
     // Initialize perfect scrollbars
     
-    // navbarScrollbar = new PerfectScrollbar('nav.navbar');
-    // articlesContainerScrollbar = new PerfectScrollbar('#articles-container');
-    // rightArticlesContainerScrollbar = new PerfectScrollbar('#right-articles-container');
+    navbarScrollbar = new PerfectScrollbar('nav.navbar');
+    articlesContainerScrollbar = new PerfectScrollbar('#articles-container');
+    rightArticlesContainerScrollbar = new PerfectScrollbar('#right-articles-container');
     
-    // updateScrollbars();
+    updateScrollbars();
 });
 
 function updateScrollbars() {

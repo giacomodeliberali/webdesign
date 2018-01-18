@@ -80,15 +80,13 @@ titles.push({
 
 function generateMainArticleHtml(objectTitle) {
     return `
-        <div class="row article debug-layout border-radius">
-            <div class="col-xs-12">
-                <article>
-                    <div class="article-image-container">
-                        <img src="${objectTitle.scrLg}" width="100%" class="img-responsive border-radius"  >
-                        <h2>${objectTitle.title}</h2>
-                    </div>
-                </article>
-            </div>
+        <div class="col-xs-12 col-lg-6 ">
+            <article class="article debug-layout border-radius mb-10 article">
+                <div class="article-image-container">
+                    <img src="${objectTitle.scrLg}" width="100%" class="img-responsive border-radius">
+                    <h2>${objectTitle.title}</h2>
+                </div>
+            </article>
         </div>
     `;
 }
@@ -96,5 +94,5 @@ function generateMainArticleHtml(objectTitle) {
 $(document).ready(function () {
 
     for (var i = 0; i < 20; i++)
-        $("#articles-container").append(generateMainArticleHtml(titles[Math.floor(Math.random() * (titles.length))]));
+        $("#articles-row").append(generateMainArticleHtml(titles[Math.floor(Math.random() * (titles.length))]));
 });
