@@ -84,7 +84,7 @@ function generateMainArticleHtml(objectTitle) {
             <article class="article debug-layout border-radius mb-10 article">
                 <div class="article-image-container">
                     <img src="${objectTitle.scrLg}" width="100%" class="img-responsive border-radius">
-                    <h2>${objectTitle.title}</h2>
+                    <a href="articolo.html"><h2>${objectTitle.title}</h2></a>
                 </div>
             </article>
         </div>
