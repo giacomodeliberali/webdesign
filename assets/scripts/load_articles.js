@@ -82,15 +82,11 @@ function generateMainArticleHtml(objectTitle) {
     return `
         <div class="row article debug-layout border-radius">
             <div class="col-xs-12">
-                <article >
-                    <img src="${objectTitle.scrLg}" width="100%" class="img-responsive border-radius"  >
-                    
-                    <span class="text-center"><a href="articolo.html"><h2>${objectTitle.title}</h2></a></span>
-                    <hr width=90% size=4 color=000000>
-                    <span class="text-center"><h4>${objectTitle.sub}</h4></span>
-                    
-
-                    
+                <article>
+                    <div class="article-image-container">
+                        <img src="${objectTitle.scrLg}" width="100%" class="img-responsive border-radius"  >
+                        <h2>${objectTitle.title}</h2>
+                    </div>
                 </article>
             </div>
         </div>

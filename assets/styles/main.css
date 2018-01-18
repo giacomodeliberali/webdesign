@@ -327,3 +327,19 @@ article {
 .carousel-caption {
     bottom: -30px;
 }
+
+.article-image-container{
+    position: relative;
+}
+.article-image-container h2{
+    position: absolute;
+    bottom: 0px;
+    background: #000000bd;
+    color: white;
+    width: calc(100% - 20px);
+    left: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-indent: 10px;
+    padding: 3px;
+}
