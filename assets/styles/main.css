@@ -103,11 +103,22 @@ body {
     position: relative;
 }
 
+#right-content h3{
+    text-align: center;
+    background: #ECEFF1;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    margin-top: 0px;
+    color: black;
+}
+
 #articles-container {
     height: calc(100vh - 42px - 15px - 55px);
     overflow-y: auto;
     position: relative;
 }
+
+
 
 
 /* Footer*/

@@ -236,32 +236,33 @@
         <div class="row">
             <div class="col-xs-12 col-no-padding">
                 <!-- Horizontal navbar -->
-                <div class="row debug-layout">
-                        <div class="col-sm-1 hidden-xs hidden-md hidden-lg" style="height: 52px">
-                            <button class="btn btn-float btn-sm pull-left" id="sidebarOpener">
-                                <i class="fa fa-bars" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                        <div class="col-xs-4" style="height: 52px">
-                            <h4 style="line-height: 35px">Titolo dell'evento</h4>
-                        </div>
-                        <div class="col-md-7 col-sm-6 col-xs-7 padding-10">
-                                <!-- Search box -->
-                                <form action="" class="search-form" style="max-width: 100%">
-                                    <div class="form-group has-feedback">
-                                        <label for="search" class="sr-only">Search</label>
-                                        <input type="text" class="form-control" name="search" id="search" placeholder="Cerca...">
-                                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                    </div>
-                                </form>
-                        </div>
-                        <div class="col-sm-1 col-xs-1 text-center padding-10" id="userbox">
-                            <!-- User box -->
-                            <a href="login.html">
-                                <span class="glyphicon glyphicon-user"></span>
-                            </a>
-                        </div>
+                <div class="row debug-layout border-radius-soft">
+                    <div class="col-sm-1 hidden-xs hidden-md hidden-lg" style="height: 52px">
+                        <button class="btn btn-float btn-sm pull-left" id="sidebarOpener">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
                     </div>
+                    <div class="col-xs-4" style="height: 52px">
+                        <h4 style="line-height: 35px">News</h4>
+                    </div>
+                    <div class="col-md-7 col-sm-6 col-xs-7 padding-10">
+                            <!-- Search box -->
+                            <form action="ricerca.html" class="search-form" style="max-width: 100%">
+                                <div class="form-group has-feedback">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <input type="text" class="form-control" name="search" id="search" placeholder="Cerca...">
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </div>
+                                <input type="hidden" value="keyword" name="type">
+                            </form>
+                    </div>
+                    <div class="col-sm-1 col-xs-1 text-center padding-10" id="userbox">
+                        <!-- User box -->
+                        <a href="login.html">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </div>
+                </div>
                 <!-- Content here -->
                 <div class="row">
                     <!-- Content event -->
@@ -310,32 +311,38 @@
                     <!-- Right articles -->
                     <div class="col-sm-3 col-xs-12 col-no-padding mt-15" id="right-content">
                         <div id="right-articles-container">
+                            
+                            
                             <!-- Articles printed by javascript here -->
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <div id="myCarousel" class="carousel slide  debug-layout border-radius-soft" data-ride="carousel">
                               <!-- Indicators -->
-                              <ol class="carousel-indicators">
+                              <!-- <ol class="carousel-indicators">
                                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                 <li data-target="#myCarousel" data-slide-to="1"></li>
                                 <li data-target="#myCarousel" data-slide-to="2"></li>
-                              </ol>
-
+                              </ol> -->
+                              <h3>Eventi vicini a te</h3>
+                                
                               <!-- Wrapper for slides -->
                               <div class="carousel-inner">
                                 <div class="item active">
-                                  <img src="https://www.metro.us/sites/default/files/styles/normal_article/public/main/articles/2016/02/18/4061232914_0241752ed1_b_1.jpg" alt="Los Angeles" width="100%">
-                                </div>
-
-                                <div class="item">
-                                  <img src="https://www.metro.us/sites/default/files/styles/normal_article/public/main/articles/2016/02/18/4061232914_0241752ed1_b_1.jpg" alt="Chicago" width="100%">
-                                </div>
-
-                                <div class="item">
-                                  <img src="https://www.metro.us/sites/default/files/styles/normal_article/public/main/articles/2016/02/18/4061232914_0241752ed1_b_1.jpg" alt="New York" width="100%">
+                                  <img src="https://avatars2.githubusercontent.com/u/1294177?s=200&v=4" alt="Immagine raspberry PI" width="100%">
                                     <div class="carousel-caption">
-                                        <h3>Los Angeles</h3>
-                                        <div class="col-sm-12 hidden-xs">
-                                            <p>LA is always so much fun!</p>
-                                        </div>
+                                        <h3>Raspberry PI</h3>
+                                    </div>    
+                                </div>
+
+                                <div class="item">
+                                  <img src="https://it.rs-online.com/euro/img/global/brand/arduino/arduino-electric-2.jpg" alt="Immagine arduino uno" width="100%">
+                                    <div class="carousel-caption">
+                                        <h3>Arduino Uno</h3>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                  <img src="http://www.itcolorado.com/wp-content/uploads/2017/05/it-colorado-logo.png" alt="Logo IT Colorado" width="100%">
+                                    <div class="carousel-caption">
+                                        <h3 >Colorado IT</h3>
                                     </div>
                                 </div>
                               </div>
@@ -349,30 +356,34 @@
                                 <span class="glyphicon glyphicon-chevron-right"></span>
                                 <span class="sr-only">Next</span>
                               </a>
-                        </div>
+                            </div>
                         </div>
                         <br>
                         <!-- Pannelloo gestione tag -->
+                        <!-- Pannelloo gestione tag -->
                         <div class="bordered text-center debug-layout border-radius">
-                            <h3>Pannello di gestione Tag</h3>
-                            <div class="row" id="tag_container">
-                                <div class="btn-group btn-breadcrumb">
-                                    <a href="#" class=" btn btn-default">Tag1</a>
-                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
-                                </div>
-                                <div class="btn-group btn-breadcrumb">
-                                    <a href="#" class=" btn btn-default">Tag2</a>
-                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
-                                </div>
-                                <div class="btn-group btn-breadcrumb">
-                                    <a href="#" class=" btn btn-default">Tag3</a>
-                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
-                                </div>
-                                <div class="btn-group btn-breadcrumb">
-                                    <a href="#" class=" btn btn-default">Tag4</a>
-                                    <a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
-                                </div>
-                                
+                            <h2>Pannello di gestione Tag</h2>
+                            <div class="row" >
+                                <form action="ricerca.html" method="get" id="tag_container">
+                                    <input type="hidden" name="type" value="tag">
+                                    <div class="btn-group btn-breadcrumb">
+                                        <button type="submit" name="search" value="Tag1" class=" btn btn-default btn-sm">Tag1</button>
+                                        <a href="#" class="btn btn-danger btn-sm" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                    </div>
+                                    
+                                    <div class="btn-group btn-breadcrumb">
+                                        <button type="submit" name="search" value="Tag2" class=" btn btn-default btn-sm">Tag2</button>
+                                        <a href="#" class="btn btn-danger btn-sm" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                    </div>
+                                    <div class="btn-group btn-breadcrumb">
+                                        <button type="submit" name="search" value="Tag3" class=" btn btn-default btn-sm">Tag3</button>
+                                        <a href="#" class="btn btn-danger btn-sm" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                    </div>
+                                    <div class="btn-group btn-breadcrumb">
+                                        <button type="submit" name="search" value="Tag4" class=" btn btn-default btn-sm">Tag4</button>
+                                        <a href="#" class="btn btn-danger btn-sm" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                    </div>
+                                </form>
                                 <!-- New tag are added here-->
                             </div>
                             <div class="row">
@@ -387,8 +398,8 @@
                                                 content="";
                                             }
                                             if(content!=""){    
-                                                var toAdd = '<div class="btn-group btn-breadcrumb"><a href="#" class=" btn btn-default">'+content+'</a><a href="#" class="btn btn-default" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a></div>';
-                                                $("#tag_container").html($("#tag_container").html() + toAdd); 
+                                                var toAdd = '<div class="btn-group btn-breadcrumb"><button type="submit" name="search" value="'+content+'" class=" btn btn-default btn-sm">'+content+'</button><a href="#" class="btn btn-danger btn-sm " onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a></div>';
+                                                $("#tag_container").append(toAdd); 
                                             }
                                             $("#newtag").val("");
                                         })
