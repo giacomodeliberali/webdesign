@@ -64,6 +64,7 @@ body {
 .mt-10 {
     margin-top: 10px !important;
 }
+
 .mtb-10 {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
@@ -93,6 +94,7 @@ body {
     /*overflow-y: auto;*/
     position: relative;
 }
+
 #articles-container {
     height: calc(100vh - 42px - 15px - 55px);
     overflow-y: auto;
@@ -138,6 +140,10 @@ footer .row div * {
     }
     .xs-mt-10 {
         margin-top: 10px;
+    }
+
+    .navbar-brand{
+        padding: 8px;
     }
 }
 
@@ -254,50 +260,66 @@ div.play-button {
     left: 0;
 }
 
-#blogger{
+#blogger {
     width: 100%;
 }
 
-#logo{
+#logo {
     height: 100%;
     margin: auto;
+    border-radius: 10px;
 }
 
-.border-radius { 
-  border-radius: 10px; 
-  -moz-border-radius: 10px; /* firefox */
-  -webkit-border-radius: 10px; /* safari, chrome */
+.border-radius {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    /* firefox */
+    -webkit-border-radius: 10px;
+    /* safari, chrome */
 }
 
-.border-radius-soft { 
-  border-radius: 5px; 
-  -moz-border-radius: 5px; /* firefox */
-  -webkit-border-radius: 5px; /* safari, chrome */
+.border-radius-soft {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    /* firefox */
+    -webkit-border-radius: 5px;
+    /* safari, chrome */
 }
 
-.top-margin{
+.top-margin {
     margin: 10px 0px;
 }
 
-#blogger{
+#blogger {
     margin: 10px 0px;
 }
 
-#barra_ricerca{
+#barra_ricerca {
     width: 100%;
 }
 
-img.border-radius{
+img.border-radius {
     border-radius: 20px;
 }
 
-article{
+article {
     position: relative;
 }
-.remove-article{
+
+.remove-article {
     position: absolute;
     top: 0px;
     right: 0px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
+}
+
+.carousel-caption>h3 {
+    background: #000000a3;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+}
+
+.carousel-caption {
+    bottom: -30px;
 }
