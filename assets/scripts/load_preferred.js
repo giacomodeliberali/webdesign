@@ -76,11 +76,8 @@ function generatePreferredHtml(objectTitle, id) {
                         </div>
                         <div class="col-sm-6 col-md-8">
                             <div class="row">
-                                <div class="col-xs-11 com-sm-11">
+                                <div class="col-xs-12">
                                     <a href="articolo.html"><h2>${objectTitle.title}</h2></a>
-                                </div>
-                                <div class="col-xs-1 com-sm-1">
-                                    <button type="button" class="btn btn-danger" onclick="removeArticle('art${id}')"><i class="fa fa-times"></i></button>
                                 </div>
                             </div>
                             <div class="row">
@@ -104,7 +101,7 @@ function generatePreferredHtml(objectTitle, id) {
 
                         </div>
                     </div>
-
+                    <button type="button" class="btn btn-danger btn-sm remove-article" onclick="removeArticle('art${id}')"><i class="fa fa-times"></i></button>
                 </article>
         </div>
     `;

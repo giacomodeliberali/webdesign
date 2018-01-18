@@ -260,7 +260,7 @@ div.play-button {
 
 #logo{
     height: 100%;
-    width: 100%;
+    margin: auto;
 }
 
 .border-radius { 
@@ -289,4 +289,15 @@ div.play-button {
 
 img.border-radius{
     border-radius: 20px;
+}
+
+article{
+    position: relative;
+}
+.remove-article{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
