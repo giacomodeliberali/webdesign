@@ -31,7 +31,7 @@
 
 <body>
     <!-- Include navbar section -->
-    <nav class="navbar navbar-inverse sidebar" role="navigation">
+    <nav class="navbar navbar-inverse sidebar hidden-sm" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -42,6 +42,9 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html"><img src="./assets/images/Mini4WDLogo.png" alt="Logo MINI 4WD" id="logo"></a>
+                <a class="btn btn-sm btn-flat hidden-xs hidden-md hidden-lg" id="sidebarCloser">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
@@ -54,7 +57,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Blog
+                        <a href="blogger.html">Blog
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
                                 <i class="fa fa-pencil"></i>
                             </span>
@@ -230,19 +233,27 @@
         <div class="row">
             <div class="col-xs-12 col-no-padding ">
                 <!-- Horizontal navbar -->
-                <div class="row ">
-                    <div class="col-sm-11 col-xs-11 text-right debug-layout padding-10 ">
-                        <!-- Search box -->
-                        <form action="" class="search-form" style="max-width: 100%">
-                            <div class="form-group has-feedback">
-                                <label for="search" class="sr-only">Search</label>
-                                <input type="text" class="form-control" name="search" id="search" placeholder="Cerca...">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </form>
+                <div class="row debug-layout border-radius-soft">
+                    <div class="col-sm-1 hidden-xs hidden-md hidden-lg" style="height: 52px">
+                        <button class="btn btn-float btn-sm pull-left" id="sidebarOpener">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
                     </div>
-                    <div class="col-sm-1 col-xs-1 text-right debug-layout padding-10" id="userbox">
-                        <!-- Da sistemare il debug layout  e la posizione dell'cona user (copia e incolla da altrove)!-->
+                    <div class="col-xs-4" style="height: 52px">
+                        <h4 style="line-height: 35px">Utente</h4>
+                    </div>
+                    <div class="col-md-7 col-sm-6 col-xs-7 padding-10">
+                            <!-- Search box -->
+                            <form action="ricerca.html" class="search-form" style="max-width: 100%">
+                                <div class="form-group has-feedback">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <input type="text" class="form-control" name="search" id="search" placeholder="Cerca...">
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </div>
+                                <input type="hidden" value="keyword" name="type">
+                            </form>
+                    </div>
+                    <div class="col-sm-1 col-xs-1 text-center padding-10" id="userbox">
                         <!-- User box -->
                         <a href="login.html">
                             <span class="glyphicon glyphicon-user"></span>

@@ -62,7 +62,11 @@ body {
 }
 
 .mt-10 {
-    margin-top: 10px;
+    margin-top: 10px !important;
+}
+.mtb-10 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
 }
 
 .padding-10 {
