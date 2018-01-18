@@ -76,11 +76,11 @@ function generatePreferredHtml(objectTitle, id) {
                         </div>
                         <div class="col-sm-6 col-md-8">
                             <div class="row">
-                                <div class="col-xs-10 com-sm-10">
+                                <div class="col-xs-11 com-sm-11">
                                     <a href="articolo.html"><h2>${objectTitle.title}</h2></a>
                                 </div>
-                                <div class="col-xs-2 com-sm-2">
-                                    <button type="button" class="btn btn-danger" onclick="removeArticle('art${id}')">Rimuovi dai preferiti</button>
+                                <div class="col-xs-1 com-sm-1">
+                                    <button type="button" class="btn btn-danger" onclick="removeArticle('art${id}')"><i class="fa fa-times"></i></button>
                                 </div>
                             </div>
                             <div class="row">
@@ -94,7 +94,7 @@ function generatePreferredHtml(objectTitle, id) {
                                 </div> 
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 com-sm-12">
+                                <div class="hidden-xs com-sm-12">
                                     <p><b>Breve descrizione : </b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
                                     euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                                     Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
