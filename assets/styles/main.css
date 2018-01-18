@@ -74,6 +74,10 @@ body {
     padding: 10px;
 }
 
+.pb-10{
+    padding-bottom: 10px !important; 
+}
+
 
 /* Defualt main container height is 100 of vertical viewport and has auto vertical overflow */
 
