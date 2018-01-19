@@ -7,19 +7,33 @@ h3,h1{
     border-radius: 10px 10px 10px 10px;
 }
 
+#mapImage{
+    margin: 20px 20px 20px 20px;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+
+@media (max-width: 520px){
+    #mapImage{
+        margin: 0px 0px 0px 0px ;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    
+}
+
 #testo-evento{
     padding: 15px 15px 15px 15px;
     font-size: 16px;
     text-align: justify;
 }
 
-#testo-evento img{
-    margin: 20px 20px 20px 20px;
-    border-width: 2px 2px 2px 2px;
-    border-style: solid;
-    border-radius: 10px 10px 10px 10px;
-} 
 
 #testo-evento::first-letter{
     font-size: 3em;
 }
+
+
