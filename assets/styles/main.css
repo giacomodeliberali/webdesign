@@ -363,3 +363,12 @@ article {
     padding: 3px 3px 3px 10px;
     font-size: 22px;
 }
+
+#blogger_info p{
+    padding: 0px 5px 0px 10px;
+}
+
+#blogger_info_xs p, #blogger_info_xs h3{
+    padding: 0px 5px 0px 10px;
+    
+}
