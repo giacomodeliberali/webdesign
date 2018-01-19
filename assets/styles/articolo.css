@@ -6,3 +6,16 @@ h1,h3 {
 img#immagineArticolo{
     width:100%;
 }
+
+#articleStar{
+    color: white;
+    line-height: 34px;
+    position: absolute;
+    right: 10px;
+}
+#articleStar.on{
+    color: yellow;
+}
+#articleStar:hover{
+    cursor: pointer;
+}
