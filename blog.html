@@ -277,8 +277,8 @@
                                         <a href="index.html" class="btn btn-default">
                                             <i class="glyphicon glyphicon-home"></i>
                                         </a>
-                                        <a href="categoria.html" class="btn btn-default">Blog</a>
-                                        <a href="categoria.html" class="btn btn-default">Autore</a>
+                                        <a href="blogger.html" class="btn btn-default">Blog</a>
+                                        <a href="blog.html" class="btn btn-default">Autore</a>
                                     </div>
                                 </div>
                                 <!-- Select -->
@@ -326,7 +326,7 @@
 
 
 
-                        function generateMainArticleHtml(objectTitle) {
+                        function generateMainArticleHtml(objectTitle,i) {
                             return `
                                 <div class="row article debug-layout border-radius">
                                     <div class="col-xs-12">
@@ -345,6 +345,24 @@
                                                         euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                                                 </div>
                                             </div>
+                                           <button type="button" class="btn btn-info show_content" data-toggle="collapse" data-target="#comments${i}">Mostra/Nascondi Commenti</button>
+                                                  <div id="comments${i}" class="collapse">
+                                                    <div class="row">
+                                                        <h4>nome utente</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <h4>nome utente2</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <h4>nome utente</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                                    </div>
+                                                  </div>
                                         </article>
                                     </div>
                                 </div>
@@ -354,7 +372,7 @@
                         $(document).ready(function () {
 
                             for (var i = 0; i < titles.length; i++)
-                                $("#articles-container").append( generateMainArticleHtml(titles[i]));
+                                $("#articles-container").append( generateMainArticleHtml(titles[i],i));
                         });
                     </script>
                     </div>
@@ -369,7 +387,7 @@
                                 Nome del Blogger
                             </h3>
                             <img src="./assets/images/placeholder_user.png" width="100%">
-                            <p><b>Ineresse: </b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p><b>Interesse: </b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                             <p><b>Numero follower: </b> 1234</p>
                             <p><b>Numero post redatti: </b> 42 </p>
                             <p><b>Specialità: </b> Algoritmi avanzati</p>
