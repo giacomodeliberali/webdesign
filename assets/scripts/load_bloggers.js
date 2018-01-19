@@ -5,17 +5,20 @@ blogger.push({
     nart: 1323,
     specialità: "Hardware",
     pres: "Salvatore Aranzulla è il fondatore del sito Aranzulla.it",
+    follower: 1024,
     foto:"./assets/images/sa.jpeg",
     
 });
 
 blogger.push({
    name: "Ciccio Gamer",
-    rate: 9999,
+    rate: 9,
     nart: 10,
     specialità: "Videogame",
-    pres: "Ciccio Gamer è un boss",
+    pres: "Ciccio Gamer il re del gameplay",
+    follower: 22,
     foto:"./assets/images/cicciogamer.jpg",
+
     
 });
 
@@ -30,7 +33,7 @@ function generateMainBloggerHtml(objectBlogger) {
                 <div class="col-sm-8" height="100%">
                     <div class="row">
                         <div class="col-xs-8 col-sm-8">
-                            <h3>${objectBlogger.name}</h3>
+                            <a href="blog.html"><h3>${objectBlogger.name}</h3></a>
                         </div>
                         <div class="col-xs-4 col-sm-4">
                             <b>Rate: </b>${objectBlogger.rate}
@@ -53,7 +56,7 @@ function generateMainBloggerHtml(objectBlogger) {
                     </div>
                     <div class="row">
                         <div class="col-xs-4 col-sm-4">
-                            <b>#Follower:</b>
+                            <b>#Follower:</b> ${objectBlogger.follower}
                         </div>
                     </div>
                 </div>

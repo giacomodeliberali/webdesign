@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Blog
+                        <a href="blogger.html">Blog
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
                                 <i class="fa fa-pencil"></i>
                             </span>
@@ -217,7 +217,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Servizi
+                        <a href="servizi.html">Servizi
                             <span style="font-size:16px;" class="pull-right hidden-xs showopacity">
                                 <i class="fa fa-envelope"></i>
                             </span>
@@ -242,7 +242,7 @@
                             </button>
                         </div>
                         <div class="col-xs-4" style="height: 52px">
-                            <h4 style="line-height: 35px">News</h4>
+                            <h4 style="line-height: 35px">BOOO</h4>
                         </div>
                         <div class="col-md-7 col-sm-6 col-xs-7 padding-10">
                                 <!-- Search box -->
@@ -283,7 +283,7 @@
                         <h3>Sottotitolo</h3>
                         
                         <img id="immagineArticolo" src="https://conteudo.imguol.com.br/blogs/160/files/2017/06/isis-valverde-joao-miguel-jr.jpg" alt="Immagine articolo" >
-                        <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
+                        <p class="text-center debug-layout border-radius-soft mt-15">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
                         
                         <!-- Footer printed by javascript here -->
                     </div>
@@ -334,30 +334,50 @@
                               </a>
                         </div>
                         </div>
-                        <!-- Tag modificabili -->
-                        <div class="bordered">
-                            <h3>Pannello di inserimento Tag</h3>
-                            <div class="row" id="tag_container">
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
-                                <button>Tag1 <span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>
+                        <!-- Pannelloo gestione tag -->
+                        <div class="bordered text-center debug-layout border-radius">
+                            <h2>Pannello di gestione Tag</h2>
+                            <div class="row" >
+                                <form action="ricerca.html" method="get" id="tag_container">
+                                    <input type="hidden" name="type" value="tag">
+                                    <div class="btn-group btn-breadcrumb">
+                                        <button type="submit" name="search" value="Tag1" class=" btn btn-default btn-sm">Tag1</button>
+                                        <a href="#" class="btn btn-danger btn-sm" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                    </div>
+
+                                    <div class="btn-group btn-breadcrumb">
+                                        <button type="submit" name="search" value="Tag2" class=" btn btn-default btn-sm">Tag2</button>
+                                        <a href="#" class="btn btn-danger btn-sm" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                    </div>
+                                    <div class="btn-group btn-breadcrumb">
+                                        <button type="submit" name="search" value="Tag3" class=" btn btn-default btn-sm">Tag3</button>
+                                        <a href="#" class="btn btn-danger btn-sm" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                    </div>
+                                    <div class="btn-group btn-breadcrumb">
+                                        <button type="submit" name="search" value="Tag4" class=" btn btn-default btn-sm">Tag4</button>
+                                        <a href="#" class="btn btn-danger btn-sm" onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a>
+                                    </div>
+                                </form>
                                 <!-- New tag are added here-->
                             </div>
                             <div class="row">
-                                    <input id="newtag" type="text" placeholder="Inserisci tag">
-                                    <button type="button" id="inserisci">Inserisci</button>
-                                    
-                                    <script>
-                                        $("#inserisci").on("click",function(){
-                                            var content = $("#newtag").val();
-                                            if(content!=""){    
-                                                var toAdd = '<button>'+content +'<span class="fa fa-trash-o" onclick="$(this).parent().fadeOut()"></span></button>';
-                                                $("#tag_container").html($("#tag_container").html() + toAdd);
-                                                $("#newtag").val("");
-                                            }
-                                        })
-                                    </script>
+                                <input id="newtag" type="text" placeholder="Inserisci tag">
+                                <button type="button" id="inserisci">Inserisci</button>
+
+                                <script>
+                                    $("#inserisci").on("click",function(){
+                                        var content = $("#newtag").val();
+                                        if(content.length>20){
+                                            alert("Impossibile inserire tag così lungo");
+                                            content="";
+                                        }
+                                        if(content!=""){
+                                            var toAdd = '<div class="btn-group btn-breadcrumb"><button type="submit" name="search" value="'+content+'" class=" btn btn-default btn-sm">'+content+'</button><a href="#" class="btn btn-danger btn-sm " onclick="$(this).parent().fadeOut()"><span class="fa fa-trash-o" ></span></a></div>';
+                                            $("#tag_container").append(toAdd);
+                                        }
+                                        $("#newtag").val("");
+                                    })
+                                </script>
                             </div>
                             <br>
                         </div>
