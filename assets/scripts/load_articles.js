@@ -80,7 +80,7 @@ titles.push({
 
 function generateMainArticleHtml(objectTitle) {
     return `
-        <div class="col-xs-12 col-lg-6 ">
+        <div class="col-xs-12 col-lg-6 " id="art">
             <article class="article debug-layout border-radius mb-10 article">
                 <div class="article-image-container">
                     <img src="${objectTitle.scrLg}" width="100%" class="img-responsive border-radius">
