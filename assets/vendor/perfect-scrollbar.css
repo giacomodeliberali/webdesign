@@ -110,3 +110,8 @@
     overflow: auto !important;
   }
 }
+
+/*Nasconderla alla stampa ( a quanto pare non funziona ) */
+/*@media print {
+    .ps{display:none;}
+}*/

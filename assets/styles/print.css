@@ -1,0 +1,31 @@
+/* Crea l'area di stampa per un foglio A4*/
+@page {size: 210mm 297mm; margin: 30mm;}
+
+/*Regole per i caratteri di stampa*/
+body {
+    background: white;
+    font-size: 12pt;
+    color: black;
+    font-family: “Times New Roman”, Times, serif!important;
+}
+
+/*Se mettiamo dei link bisogna sistemare*/
+/*
+#content a:link, #content_box a:visited {
+    background: none repeat scroll 0 0 transparent;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#content a[href^="/"]:after {
+    content: " (http://www.laboratoriocss.it" attr(href) ") ";
+    font-size: 70%;
+}
+*/
+
+
+/*Dovrebbe nascondere le cose che non vogliamo stampare*/
+.navbar, #right-content, footer, #hnav{display:none;}
+
+/*Per ora inutile*/
+/*div#articles-container div#articles-container{width: auto;}*/
