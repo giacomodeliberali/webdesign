@@ -25,7 +25,7 @@ body {
 
 
 /*Dovrebbe nascondere le cose che non vogliamo stampare*/
-#navbar, #right-content, #footer, #search{display:none;}
+.navbar, #right-content, footer, #hnav{display:none;}
 
 /*Per ora inutile*/
-/*div#articles-container {width: auto;}*/
+/*div#articles-container div#articles-container{width: auto;}*/
