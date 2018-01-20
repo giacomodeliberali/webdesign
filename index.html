@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./assets/styles/sidebar.css">
     <link rel="stylesheet" href="./assets/styles/searchbar.css">
     <link rel="stylesheet" href="./assets/styles/main.css"> 
-    <link rel="stylesheet" type="text/css" href="./assets/styles/print.css" media="print">
     <link rel="stylesheet" href="./assets/vendor/jqcloud.min.css">
     
 
@@ -233,10 +232,10 @@
     <!-- Content -->
     <div class="container main">
         <!-- Main row container -->
-        <div class="row">
+        <div class="row ">
             <div class="col-xs-12 col-no-padding">
             <!-- Horizontal navbar -->
-            <div class="row debug-layout border-radius-soft" id="hnav">
+            <div class="row debug-layout border-radius-soft hidden-print">
                     <div class="col-sm-1 hidden-xs hidden-md hidden-lg" style="height: 52px">
                         <button class="btn btn-float btn-sm pull-left" id="sidebarOpener">
                             <i class="fa fa-bars" aria-hidden="true"></i>
@@ -333,10 +332,10 @@
             </div>
         </div>
     </div>    
-    <button id="backToTop" class="btn btn-sm">
+    <button id="backToTop" class="btn btn-sm hidden-print">
         <i class="fa fa-arrow-up"></i>
     </button>
-    <footer class="footer debug-layout">
+    <footer class="footer debug-layout hidden-print">
         <div class="row">
             <div class="col-md-4 hidden-xs hidden-sm text-center">
                 <div>Indice sito</div>

@@ -78,11 +78,13 @@ titles.push({
 });
 
 
+/*Se metti hidden-print sull'immagine va via, il mio obiettivo era ridimensionare le immagini con il css in modo che 
+ne venissero fuori due sulla stessa riga e i titoli sotto, questo mi faceva perdere la testa*/
 function generateMainArticleHtml(objectTitle) {
     return `
         <div class="col-xs-12 col-lg-6 " id="art">
             <article class="article debug-layout border-radius mb-10 article">
-                <div class="article-image-container hidden-print">
+                <div class="article-image-container hidden-print"> 
                     <img src="${objectTitle.scrLg}" width="100%" class="img-responsive border-radius">
                     <a href="articolo.html"><h2>${objectTitle.title}</h2></a>
                 </div>
