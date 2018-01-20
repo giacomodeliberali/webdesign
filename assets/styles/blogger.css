@@ -18,3 +18,9 @@ img.foto{
    -o-transform: translate(-50%, -50%);
    transform: translate(-50%,-50%);
 }
+
+img.v-center{
+    position:absolute; 
+    top: 20px;
+    left: 20px;
+}

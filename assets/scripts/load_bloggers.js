@@ -6,18 +6,18 @@ blogger.push({
     specialità: "Hardware",
     pres: "Salvatore Aranzulla è il fondatore del sito Aranzulla.it",
     follower: 1024,
-    foto:"./assets/images/sa.jpeg",
+    foto:"https://www.alanidental.com/wp-content/uploads/2016/01/default.png",
     
 });
 
 blogger.push({
-   name: "Ciccio Gamer",
+    name: "Computerphile",
     rate: 9,
-    nart: 10,
-    specialità: "Videogame",
-    pres: "Ciccio Gamer il re del gameplay",
-    follower: 22,
-    foto:"./assets/images/cicciogamer.jpg",
+    nart: 24,
+    specialità: "Hacking",
+    pres: "Maghi della criptografia",
+    follower: 9000,
+    foto:"./assets/images/placeholder_user.png",
 
     
 });
@@ -27,10 +27,10 @@ blogger.push({
 function generateMainBloggerHtml(objectBlogger) {
     return `
             <div class="row article debug-layout border-radius">
-                <div class="col-sm-4 hidden-xs ">
-                    <img src="${objectBlogger.foto}" width="100px" height="100px"> 
+                <div class="col-sm-3 hidden-xs">
+                        <img class="v-center" src="${objectBlogger.foto}" width="100px" height="100px"> 
                 </div> 
-                <div class="col-sm-8" height="100%">
+                <div class="col-sm-9" height="100%">
                     <div class="row">
                         <div class="col-xs-8 col-sm-8">
                             <a href="blog.html"><h3>${objectBlogger.name}</h3></a>
