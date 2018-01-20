@@ -224,12 +224,21 @@
         </div>
     </nav>
 
+    <!-- printer logo -->
+    <header class="visible-print-block">
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3 text-center">
+                    <img src="./assets/images/Mini4WDLogo.png">
+                </div>
+    
+            </div>
+        </header>
 
     <!-- Content -->
     <div class="container main">
         <!-- Main row container -->
         <div class="row">
-            <div class="col-xs-12 col-no-padding">
+            <div class="col-xs-12 col-no-padding hidden-print">
                 <!-- Horizontal navbar -->
                 <div class="row debug-layout border-radius-soft">
                     <div class="col-sm-1 hidden-xs hidden-md hidden-lg" style="height: 52px">
@@ -283,7 +292,7 @@
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-primary">Log-in</button>
+                        <button type="submit" class="btn btn-primary hidden-print">Log-in</button>
                     </form>
                 </div>
             </div>
@@ -318,7 +327,7 @@
                             <input type="password" class="form-control" id="confirm_password" placeholder="Password" required>
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-primary">Registrati</button>
+                        <button type="submit" class="btn btn-primary hidden-print">Registrati</button>
                     </form>
                 </div>
             </div>
