@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/styles/main.css">
     <link rel="stylesheet" href="./assets/vendor/jqcloud.min.css">
     <link rel="stylesheet" href="./assets/styles/print.css" media="print">
+    <link rel="stylesheet" href="assets/styles/servizi.css">
 
 
     <!-- Include JS -->
@@ -24,7 +25,7 @@
     <script src="./assets/scripts/back-to-top.js"></script>
     <script src="./assets/vendor/perfect-scrollbar.min.js"></script>
     <script src="./assets/vendor/jqcloud.min.js"></script>
-
+    <script src="assets/scripts/servizi.js"></script>
     <title>Web design</title>
 </head>
 
@@ -242,6 +243,31 @@
     <div class="container main">
         <!-- Main row container -->
         <div class="row">
+            <div id="abc"  style="overflow:hidden; z-index: 9999">
+                <!-- Popup Div Starts Here -->
+                <div id="popupContact">
+                    <!-- Contact Us Form -->
+                    <form action="#" id="form" method="post" name="form">
+                        <img id="close" src="assets/images/close-button.png" onclick ="div_hide()">
+                        <h2>Contact Us</h2>
+                        <hr>
+                        <div class="inputWithIcon">
+                            <input id="name" name="name" type="text" placeholder="Your name">
+                            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="inputWithIcon">
+                            <input id="email" name="email" type="text" placeholder="Email">
+                            <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+                        </div>
+
+                        <textarea id="msg" name="message" placeholder="Message"></textarea>
+                        <a href="javascript:%20check_empty()" id="submit">Send</a>
+                    </form>
+                </div>
+                <!-- Popup Div Ends Here -->
+            </div>
+
             <div class="col-xs-12 col-no-padding">
                 <!-- Horizontal navbar -->
                 <div class="row debug-layout hidden-print">
@@ -264,7 +290,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-sm-1 col-xs-1 text-right padding-10" id="userbox">
+                    <div class="col-sm-1 col-xs-1 text-center padding-10" id="userbox">
                         <!-- User box -->
                         <a href="login.html">
                             <span class="glyphicon glyphicon-user"></span>
@@ -285,7 +311,7 @@
                                     adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
                                     erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                                     nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                <button type="button" class="btn-primary btn-block btn-sm hidden-print">Servizi</button>
+                                <button type="button" onclick="div_show()" class="btn-primary btn-block btn-sm hidden-print">Servizi</button>
                                 <hr class="visible-print" />
                             </div>
                             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-6 text-center mt-15">
@@ -295,7 +321,7 @@
                                     adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
                                     erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                                     nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                <button type="button" class="btn-primary btn-block btn-sm hidden-print">Lavora con noi</button>
+                                <button type="button" onclick="div_show()" class="btn-primary btn-block btn-sm hidden-print">Lavora con noi</button>
                                 <hr class="visible-print" />
                             </div>
                         </div>
@@ -307,7 +333,7 @@
                                     adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
                                     erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                                     nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                <button type="button" class="btn-primary btn-block btn-sm hidden-print">Invia materiali</button>
+                                <button type="button" onclick="div_show()" class="btn-primary btn-block btn-sm hidden-print">Invia materiali</button>
                                 <hr class="visible-print" />
                             </div>
                             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-offset-0 col-md-6 text-center mt-15">
@@ -317,7 +343,7 @@
                                     adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
                                     erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                                     nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                <button type="button" class="btn-primary btn-block btn-sm hidden-print">Contattaci</button>
+                                <button type="button" onclick="div_show()" class="btn-primary btn-block btn-sm hidden-print">Contattaci</button>
                                 <hr class="visible-print" />
                             </div>
                         </div>
