@@ -7,11 +7,13 @@
     html,
     body,
     #articles-container,
-    .container.main {
+    .container.main,
+    #video-container {
         overflow: visible;
         height: auto;
     }
     .maxh-300-print {
         max-height: 300px;
+        width: auto !important;
     }
 }
