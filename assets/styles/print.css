@@ -3,4 +3,10 @@
         display: none;
     }
     
+    #articles-container{
+        overflow: visible;
+        height:auto;
+    }
+    
+    
 }
