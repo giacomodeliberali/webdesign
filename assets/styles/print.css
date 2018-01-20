@@ -15,5 +15,6 @@
     .maxh-300-print {
         max-height: 300px;
         width: auto !important;
+        margin: auto;
     }
 }
