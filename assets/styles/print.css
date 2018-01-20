@@ -1,12 +1,13 @@
-@media print{
-    nav{
+@media print {
+    nav {
         display: none;
     }
     
-    #articles-container{
+    html,
+    body,
+    #articles-container,
+    .container.main {
         overflow: visible;
-        height:auto;
+        height: auto;
     }
-    
-    
 }
