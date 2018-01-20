@@ -169,6 +169,12 @@ footer .row div * {
         padding-left: 0px;
         padding-right: 0px;
     }
+
+    #like-btn{
+        position: relative !important;
+        text-align: center;
+        padding-top: 15px;
+    }
 }
 
 @media (min-width: 992px) {
