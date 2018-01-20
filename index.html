@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./assets/styles/searchbar.css">
     <link rel="stylesheet" href="./assets/styles/main.css"> 
     <link rel="stylesheet" href="./assets/vendor/jqcloud.min.css">
+    <link rel="stylesheet" href="./assets/styles/print.css" media="print">
+    
     
 
 
@@ -235,100 +237,111 @@
         <div class="row ">
             <div class="col-xs-12 col-no-padding">
             <!-- Horizontal navbar -->
-            <div class="row debug-layout border-radius-soft hidden-print">
-                    <div class="col-sm-1 hidden-xs hidden-md hidden-lg" style="height: 52px">
-                        <button class="btn btn-float btn-sm pull-left" id="sidebarOpener">
-                            <i class="fa fa-bars" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                    <div class="col-xs-4" style="height: 52px">
-                        <h4 style="line-height: 35px">News</h4>
-                    </div>
-                    <div class="col-md-7 col-sm-6 col-xs-7 padding-10">
-                            <!-- Search box -->
-                            <form action="ricerca.html" class="search-form" style="max-width: 100%">
-                                <div class="form-group has-feedback">
-                                    <label for="search" class="sr-only">Search</label>
-                                    <input type="text" class="form-control" name="search" id="search" placeholder="Cerca...">
-                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                </div>
-                                <input type="hidden" value="keyword" name="type">
-                            </form>
-                    </div>
-                    <div class="col-sm-1 col-xs-1 text-center padding-10" id="userbox">
-                        <!-- User box -->
-                        <a href="login.html">
-                            <span class="glyphicon glyphicon-user"></span>
-                        </a>
-                    </div>
+            <nav class="row debug-layout border-radius-soft" id="hnav">
+                <div class="col-sm-1 hidden-xs hidden-md hidden-lg" style="height: 52px">
+                    <button class="btn btn-float btn-sm pull-left" id="sidebarOpener">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
                 </div>
-                <!-- Content here -->
-                <div class="row">
+                <div class="col-xs-4" style="height: 52px">
+                    <h4 style="line-height: 35px">News</h4>
+                </div>
+                <div class="col-md-7 col-sm-6 col-xs-7 padding-10">
+                        <!-- Search box -->
+                        <form action="ricerca.html" class="search-form" style="max-width: 100%">
+                            <div class="form-group has-feedback">
+                                <label for="search" class="sr-only">Search</label>
+                                <input type="text" class="form-control" name="search" id="search" placeholder="Cerca...">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                            <input type="hidden" value="keyword" name="type">
+                        </form>
+                </div>
+                <div class="col-sm-1 col-xs-1 text-center padding-10" id="userbox">
+                    <!-- User box -->
+                    <a href="login.html">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </a>
+                </div>
+            </nav>
+            <!-- Content here -->
+            <div class="row">
+
+                <!-- Main articles -->
+                <div class="col-xs-12 col-sm-9 col-md-9 col-no-padding mt-15" id="articles-container">
                     
-                    <!-- Main articles -->
-                    <div class="col-xs-12 col-sm-9 col-md-9 col-no-padding mt-15" id="articles-container">
-                        
-                        <div class="row" id="articles-row">
-                            <!-- Articles printed by javascript here -->
-                        </div>
-                    </div>
-                    <!-- Right articles -->
-                    <div class="col-sm-3 col-xs-12 col-no-padding mt-15" id="right-content">
-                        <div id="right-articles-container" class="hidden-print">
-                            <!-- Articles printed by javascript here -->
-                            <div id="myCarousel" class="carousel slide  debug-layout border-radius-soft" data-ride="carousel">
-                              <!-- Indicators -->
-                              <!-- <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                              </ol> -->
-
-                              <!-- Wrapper for slides -->
-                              <div class="carousel-inner">
-                                <div class="item active">
-                                  <img src="https://avatars2.githubusercontent.com/u/1294177?s=200&v=4" alt="Immagine raspberry PI" width="100%">
-                                    <div class="carousel-caption">
-                                        <h3>Raspberry PI</h3>
-                                    </div>    
-                                </div>
-
-                                <div class="item">
-                                  <img src="https://it.rs-online.com/euro/img/global/brand/arduino/arduino-electric-2.jpg" alt="Immagine arduino uno" width="100%">
-                                    <div class="carousel-caption">
-                                        <h3>Arduino Uno</h3>
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                                  <img src="http://www.itcolorado.com/wp-content/uploads/2017/05/it-colorado-logo.png" alt="Logo IT Colorado" width="100%">
-                                    <div class="carousel-caption">
-                                        <h3 >Colorado IT</h3>
-                                    </div>
-                                </div>
-                              </div>
-
-                              <!-- Left and right controls -->
-                              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                                <span class="sr-only">Next</span>
-                              </a>
+                    <!-- printer logo -->
+                    <header class="visible-print-block">
+                        <div class="row">
+                            <div class="col-xs-6 col-xs-offset-3"  >
+                                <img src="./assets/images/Mini4WDLogo.png">
                             </div>
-                            <!-- Blogger del mese-->
-                            <div id="blogger" class="row debug-layout border-radius-soft text-center" id="blogger">
-                                <span><b>Blogger del mese :</b> <a href="blog.html">LuckyUnlock</a></span>
-
-                            </div>
-                            <!-- Tag cloud -->
-                            <div id="tag-cloud" class="debug-layout border-radius"></div>
-                            <!-- <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/> -->
+                            
                         </div>
+                    </header>
+
+
+                    <div class="row" id="articles-row">
+                        <!-- Articles printed by javascript here -->
                     </div>
                 </div>
+                <!-- Right articles -->
+                <aside class="col-sm-3 col-xs-12 col-no-padding mt-15" id="right-content">
+                    <div id="right-articles-container" class="hidden-print">
+                        <!-- Articles printed by javascript here -->
+                        <div id="myCarousel" class="carousel slide  debug-layout border-radius-soft" data-ride="carousel">
+                          <!-- Indicators -->
+                          <!-- <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                          </ol> -->
+
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner">
+                            <div class="item active">
+                              <img src="https://avatars2.githubusercontent.com/u/1294177?s=200&v=4" alt="Immagine raspberry PI" width="100%">
+                                <div class="carousel-caption">
+                                    <h3>Raspberry PI</h3>
+                                </div>    
+                            </div>
+
+                            <div class="item">
+                              <img src="https://it.rs-online.com/euro/img/global/brand/arduino/arduino-electric-2.jpg" alt="Immagine arduino uno" width="100%">
+                                <div class="carousel-caption">
+                                    <h3>Arduino Uno</h3>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                              <img src="http://www.itcolorado.com/wp-content/uploads/2017/05/it-colorado-logo.png" alt="Logo IT Colorado" width="100%">
+                                <div class="carousel-caption">
+                                    <h3 >Colorado IT</h3>
+                                </div>
+                            </div>
+                          </div>
+
+                          <!-- Left and right controls -->
+                          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+                        <!-- Blogger del mese-->
+                        <div id="blogger" class="row debug-layout border-radius-soft text-center" id="blogger">
+                            <span><b>Blogger del mese :</b> <a href="blog.html">LuckyUnlock</a></span>
+
+                        </div>
+                        <!-- Tag cloud -->
+                        <div id="tag-cloud" class="debug-layout border-radius"></div>
+                        <!-- <img src="./assets/images/tag-cloud.jpg" id="tag-cloud"/> -->
+                    </div>
+                </aside>
+            </div>
             </div>
         </div>
     </div>    
@@ -355,4 +368,6 @@
     </footer>
 </body>
 
+    
+    
 </html>

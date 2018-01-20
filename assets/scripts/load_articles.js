@@ -82,9 +82,9 @@ titles.push({
 ne venissero fuori due sulla stessa riga e i titoli sotto, questo mi faceva perdere la testa*/
 function generateMainArticleHtml(objectTitle) {
     return `
-        <div class="col-xs-12 col-lg-6 " id="art">
+        <div class="col-xs-12 col-lg-6 hidden-print" id="art">
             <article class="article debug-layout border-radius mb-10 article">
-                <div class="article-image-container hidden-print"> 
+                <div class="article-image-container">
                     <img src="${objectTitle.scrLg}" width="100%" class="img-responsive border-radius">
                     <a href="articolo.html"><h2>${objectTitle.title}</h2></a>
                 </div>
@@ -92,6 +92,21 @@ function generateMainArticleHtml(objectTitle) {
                     ${objectTitle.title}
                 </div>
             </article>
+        </div>
+
+        <div class="row visible-print-block">
+            <div class="col-xs-4">
+                <img src="${objectTitle.srcSm}" width="100%">
+            </div>
+            <div class="col-xs-8">
+                <div class="row">
+                    <h1>${objectTitle.title}</h1>
+                </div>
+                <div class="row">
+                    <h3>${objectTitle.sub}</h3>
+                </div>
+            </div>
+
         </div>
     `;
 }

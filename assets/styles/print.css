@@ -1,0 +1,13 @@
+@media print {
+    nav {
+        display: none;
+    }
+    
+    html,
+    body,
+    #articles-container,
+    .container.main {
+        overflow: visible;
+        height: auto;
+    }
+}
