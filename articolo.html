@@ -405,7 +405,7 @@
                                 <!-- New tag are added here-->
                             </div>
                             <div class="row">
-                                <input id="newtag" type="text" placeholder="Inserisci tag">
+                                <input id="newtag" type="text" placeholder="Inserisci tag" data-toggle="tooltip" data-placement="top" title="Lunghezza massima: 20 caratteri!">
                                 <button type="button" id="inserisci">Inserisci</button>
 
                                 <script>
@@ -421,6 +421,12 @@
                                         }
                                         $("#newtag").val("");
                                     })
+                                    
+                                    
+                                    $(document).ready(function(){
+                                        $('[data-toggle="tooltip"]').tooltip();   
+                                    });
+                                        
                                 </script>
                             </div>
                             <br>

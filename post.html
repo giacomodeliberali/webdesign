@@ -356,11 +356,17 @@
                                         </div>
                                         
                                         <div id="like-btn" class="container hidden-print">
-                                                <button type="button" class="btn btn-primary btn-sm">
-                                                    <i class="fa fa-thumbs-up"></i>
-                                                </button>
-                                                <p style="display: inline-block">N° like: 100</p>
-                                            </div>
+                                            <button type="button" class="btn btn-primary btn-sm">
+                                                <i class="fa fa-thumbs-up" data-toggle="tooltip" data-placement="top" title="Like me!"></i>
+                                            </button>
+                                            <p style="display: inline-block">N° like: 100</p>
+                                        </div>
+                                        
+                                        <script>
+                                            $(document).ready(function(){
+                                                $('[data-toggle="tooltip"]').tooltip();   
+                                            });
+                                        </script>
                                     </div>
 
                                 </article>
