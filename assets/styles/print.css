@@ -17,4 +17,9 @@
         width: auto !important;
         margin: auto;
     }
+    
+    a[href]:after{
+        content: "(" attr(href) ")";
+    }
+    
 }

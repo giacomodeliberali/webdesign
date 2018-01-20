@@ -100,7 +100,7 @@ function generateMainArticleHtml(objectTitle) {
             </div>
             <div class="col-xs-8">
                 <div class="row">
-                    <h1>${objectTitle.title}</h1>
+                    <a href="articolo.html"><h1>${objectTitle.title}</h1></a>
                 </div>
                 <div class="row">
                     <h3>${objectTitle.sub}</h3>
