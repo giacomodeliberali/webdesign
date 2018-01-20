@@ -1,8 +1,8 @@
 @media print {
-    nav {
+    nav,
+    footer {
         display: none;
     }
-    
     html,
     body,
     #articles-container,
