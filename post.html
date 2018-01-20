@@ -288,7 +288,17 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <article>
+                            <div class="row debug-layout border-radius hidden-sm hidden-md hidden-lg" id="blogger_info_xs">
+                                <h3>Nome del Blogger</h3>
+
+                                <p><b>Numero follower: </b> 1234</p>
+                                <p><b>Numero post redatti: </b> 42 </p>
+                                <p><b>Specialità: </b> Algoritmi avanzati</p>
+                                <p><b>Rank classifica: </b> 5</p>
+
+
+                            </div>
+                            <article class="mt-10">
                                 <div class="row debug-layout border-radius article">
                                     <div class="col-sm-6 col-md-4">
                                         <figure>
@@ -310,39 +320,37 @@
                                 </div>
 
                             </article>
-                            <div class="row debug-layout border-radius mt-15">
-                                <div class="col-xs-4">foto e nome user</div>
-                                <div class="col-xs-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            
+                            <div id="commenti " class="debug-layout border-radius">
+                                <div class="row  border-radius">
+                                    <div class="col-xs-2 text-center"><b>NOME UTENTE</b></div>
+                                    <div class="col-xs-10 text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
 
-                            </div>
-                            <div class="row debug-layout border-radius mt-15 ">
-                                <div class="col-xs-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
-                                <div class="col-xs-4">foto e nome author</div>
-                            </div>
-                            <div class="row debug-layout border-radius mt-15">
-                                <div class="col-xs-4">foto e nome user </div>
-                                <div class="col-xs-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-xs-10 text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                    <div class="col-xs-2 text-center"><b>NOME UTENTE</b></div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-xs-2 text-center"><b>NOME UTENTE</b></div>
+                                    <div class="col-xs-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
 
+                                </div>
+                                <hr>
+                                <div id="add_comment" class="row mt-15"></div>
+                                <div class="form-group mt-15 debug-layout border-radius">
+                                    <label for="comment">Lascia il tuo commento:</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                    <button type="button" class="btn-success" onclick="document.getElementById('add_comment').innerHTML = """>Commenta</button>
+                                </div>
                             </div>
-                            <div id="add_comment" class="row mt-15"></div>
-                            <div class="form-group mt-15 debug-layout border-radius">
-                                <label for="comment">Comment:</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                                <button type="button" class="btn-success" onclick="document.getElementById('add_comment').innerHTML = "">Commenta</button>
-                            </div>
+                            
                         </div>
                     </div>
 
-                    <div class="row debug-layout border-radius hidden-sm hidden-md hidden-lg" id="blogger_info_xs">
-                        <h3>Nome del Blogger</h3>
 
-                        <p><b>Numero follower: </b> 1234</p>
-                        <p><b>Numero post redatti: </b> 42 </p>
-                        <p><b>Specialità: </b> Algoritmi avanzati</p>
-                        <p><b>Rank classifica: </b> 5</p>
-
-
-                    </div>
 
                     <!-- Articles printed by javascript here -->
                 </div>
