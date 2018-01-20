@@ -67,6 +67,5 @@ function generateMainBloggerHtml(objectBlogger) {
 $(document).ready(function () {
 
     for (var i = 0; i < 20; i++)
-        $("#articles-container").html($("#articles-container").html() +
-            generateMainBloggerHtml(blogger[Math.floor(Math.random() * (blogger.length))]));
+        $("#articles-container").append(generateMainBloggerHtml(blogger[Math.floor(Math.random() * (blogger.length))]));
 });
