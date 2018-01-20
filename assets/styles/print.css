@@ -1,5 +1,6 @@
 @media print {
     nav,
+    aside,
     footer {
         display: none;
     }
@@ -9,5 +10,8 @@
     .container.main {
         overflow: visible;
         height: auto;
+    }
+    .maxh-300-print {
+        max-height: 300px;
     }
 }
