@@ -17,3 +17,9 @@ Note per il professore:
 
 Cordiali Saluti, 
 Team MINI 4WD
+
+Componenti del team:
+	Antoniazzi Francesco Andrea (857392)
+	Busatto Alessandro (856329)
+	De Liberali Giacomo (857174)
+	Ragazzo Alessio (860550)
