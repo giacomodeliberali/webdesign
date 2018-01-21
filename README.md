@@ -9,9 +9,9 @@ Repository del corso “Web design” - Ca’ Foscari, 2017/2018. Anteprima visi
 
 Note per il professore:
 
-1) Il prototipo non presenta i classici bottoni Pagination perchè nel prodotto finito verrà implementato l'infinite scrolling tramite l'utilizzo della libreria AJAX.
-2) La caotegoria di articoli implementata è "Software", da questo deriva che un cammino valido nel prototipo è :
-	Home > Software > Articolo
+1) Il prototipo non presenta i classici bottoni Pagination perchè nel prodotto finito verrà implementato l'infinite scrolling tramite l'utilizzo di AJAX.
+2) La categoria di articoli implementata è "Software", da questo deriva che un cammino valido nel prototipo è :
+	`Home > Software > Articolo`
 3) Il pannello di gestione dei tag è effettivamente funzionante
 
 
