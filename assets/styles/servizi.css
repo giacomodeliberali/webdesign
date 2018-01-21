@@ -22,10 +22,10 @@ CSS settings for HTML div Exact Center
     height: 40px;
 }
 #popupContact {
-    position:absolute;
-    left:50%;
-    top:17%;
-    margin-left:-202px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family:'Raleway',sans-serif
 }
 #form{
