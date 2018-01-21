@@ -85,7 +85,7 @@ function generateMainArticleHtml(objectTitle) {
         <div class="col-xs-12 col-lg-6 hidden-print" id="art">
             <article class="article debug-layout border-radius mb-10 article">
                 <div class="article-image-container">
-                    <img src="${objectTitle.scrLg}" width="100%" class="img-responsive border-radius">
+                    <img src="${objectTitle.scrLg}" width="100%" class="img-responsive border-radius" alt="${objectTitle.title}">
                     <a href="articolo.html"><h2>${objectTitle.title}</h2></a>
                 </div>
                 <div class="border-layout border-radius visible-print-block">
@@ -96,7 +96,7 @@ function generateMainArticleHtml(objectTitle) {
 
         <div class="row visible-print-block">
             <div class="col-xs-4">
-                <img src="${objectTitle.srcSm}" width="100%">
+                <img src="${objectTitle.srcSm}" width="100%" alt="${objectTitle.title}">
             </div>
             <div class="col-xs-8">
                 <div class="row">

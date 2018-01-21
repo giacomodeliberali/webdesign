@@ -28,7 +28,7 @@ function generateMainBloggerHtml(objectBlogger) {
     return `
             <div class="row article debug-layout border-radius">
                 <div class="col-sm-3 hidden-xs">
-                        <img class="v-center" src="${objectBlogger.foto}" width="100px" height="100px"> 
+                        <img class="v-center" src="${objectBlogger.foto}" width="100px" height="100px" alt="${objectBlogger.name}"> 
                 </div> 
                 <div class="col-sm-9" height="100%">
                     <div class="row">
