@@ -83,7 +83,7 @@ function generatePreferredHtml(objectTitle, id) {
                 <article id="art${id}">
                     <div class="row">
                         <div class="col-sm-6 col-md-4">
-                             <img class="img-responsive" src="${objectTitle.scrLg}" width="100%">
+                             <img class="img-responsive" src="${objectTitle.scrLg}" width="100%" alt="${objectTitle.title}">
                         </div>
                         <div class="col-sm-6 col-md-8">
                             <div class="row">
@@ -118,7 +118,7 @@ function generatePreferredHtml(objectTitle, id) {
 
         <div class="row visible-print-block">
             <div class="col-xs-4">
-                <img src="${objectTitle.srcSm}" width="100%">
+                <img src="${objectTitle.srcSm}" width="100%" alt="${objectTitle.title}" class="maxh-300-print">
             </div>
             <div class="col-xs-8">
                 <div class="row">
